@@ -1,0 +1,17 @@
+{{- if eq .Params.kind "entry" -}}
+{{- $ed := site.GetPage (printf "/editions/%s" .Params.edition) -}}
+{{- $siblings := where (where site.RegularPages "Params.edition" .Params.edition) "Params.kind" "entry" -}}
+<aside class="entry-facts">
+  <h2 class="entry-facts__title">条目档案</h2>
+  <dl class="entry-facts__grid">
+    <div><dt>事件日期</dt><dd>{{ .Params.eventDate }}</dd></div>
+    <div><dt>收录期次</dt><dd>{{ with $ed }}<a href="{{ .RelPermalink }}">{{ $.Params.edition }} 日报</a>{{ else }}{{ .Params.edition }}{{ end }}</dd></div>
+    <div><dt>方向</dt><dd>{{ range .GetTerms "tags" }}<a class="badge badge--dir" href="{{ .RelPermalink }}">{{ .Title }}</a>{{ end }}</dd></div>
+    <div><dt>细分</dt><dd>{{ range .GetTerms "categories" }}<a class="badge badge--cat" href="{{ .RelPermalink }}">{{ .Title }}</a>{{ end }}</dd></div>
+    <div><dt>涉及主体</dt><dd>{{ range .GetTerms "entities" }}<a class="badge badge--ent" href="{{ .RelPermalink }}">{{ .Title }}</a>{{ end }}</dd></div>
+    <div><dt>标记</dt><dd>{{ with .Params.flags }}{{ range . }}<span class="badge badge--flag">{{ . }}</span>{{ end }}{{ else }}—{{ end }}</dd></div>
+    <div><dt>来源数</dt><dd>{{ len .Params.sources }}</dd></div>
+    <div><dt>本期第几条</dt><dd>{{ .Params.entryNo }} / {{ len $siblings }}</dd></div>
+  </dl>
+</aside>
+{{- end -}}

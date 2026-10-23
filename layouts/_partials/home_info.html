@@ -1,0 +1,66 @@
+{{- $entries := where site.RegularPages "Params.kind" "entry" -}}
+{{- $editions := where site.RegularPages "Params.kind" "edition" -}}
+{{- $latestEntries := first 6 (sort $entries "Date" "desc") -}}
+{{- $dirs := hugo.Data.directions -}}
+{{- $dirTerms := slice -}}
+{{- range site.Taxonomies.tags.ByCount -}}
+{{- if isset $dirs .Page.Data.Term -}}
+{{- $dirTerms = $dirTerms | append .Page.Data.Term -}}
+{{- end -}}
+{{- end -}}
+<section class="hero-card">
+  <div class="hero-card__text">
+    <h1 class="hero-card__title">{{ site.Title }}</h1>
+    <p class="hero-card__lead">{{ site.Params.description }}</p>
+    <div class="hero-card__stats">
+      <span class="stat"><b>{{ len $entries }}</b> 条动态</span>
+      <span class="stat"><b>{{ len $editions }}</b> 期日报</span>
+      <span class="stat"><b>{{ len $dirTerms }}</b> 个方向</span>
+      <span class="stat"><b>{{ len site.Taxonomies.entities }}</b> 类主体</span>
+    </div>
+    <div class="hero-card__cta">
+      <a class="btn btn--primary" href="{{ "library/" | relURL }}">进入动态库</a>
+      {{- range first 1 (sort $editions "Date" "desc") -}}
+      <a class="btn" href="{{ .RelPermalink }}">最新一期 · {{ .Params.edition }}</a>
+      {{- end -}}
+      <a class="btn" href="{{ "about/" | relURL }}">选题口径</a>
+    </div>
+  </div>
+</section>
+
+<section class="dir-nav">
+  <h2 class="section-title">按方向进入</h2>
+  <div class="dir-nav__grid">
+    {{- range site.Taxonomies.tags.ByCount -}}
+    {{- $page := .Page -}}
+    {{- $term := .Page.Data.Term -}}
+    {{- $count := .Count -}}
+    {{- with index $dirs $term -}}
+    <a class="dir-card" href="{{ $page.RelPermalink }}">
+      <span class="dir-card__name">{{ $term }}</span>
+      <span class="dir-card__count">{{ $count }} 条</span>
+      <span class="dir-card__desc">{{ . }}</span>
+    </a>
+    {{- end -}}
+    {{- end -}}
+  </div>
+</section>
+
+<section class="latest">
+  <h2 class="section-title">最近条目</h2>
+  <ul class="entry-list">
+    {{- range $latestEntries -}}
+    {{- $ed := site.GetPage (printf "/editions/%s" .Params.edition) -}}
+    <li class="entry-item">
+      <a class="entry-item__title" href="{{ .RelPermalink }}">{{ .Title }}</a>
+      <div class="entry-item__meta">
+        <span class="badge badge--date">{{ .Params.eventDate }}</span>
+        {{- range .GetTerms "tags" -}}<a class="badge badge--dir" href="{{ .RelPermalink }}">{{ .Title }}</a>{{- end -}}
+        {{- range .Params.flags -}}<span class="badge badge--flag">{{ . }}</span>{{- end -}}
+        {{- with $ed -}}<span class="entry-item__edition">收录于 <a href="{{ .RelPermalink }}">{{ .Params.edition }} 日报</a></span>{{- end -}}
+      </div>
+    </li>
+    {{- end -}}
+  </ul>
+  <p class="latest__more"><a href="{{ "library/" | relURL }}">全部 {{ len $entries }} 条 →</a></p>
+</section>

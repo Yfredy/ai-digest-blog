@@ -1,0 +1,10 @@
+/public/
+/resources/_gen/
+/hugo_cache/
+node_modules/
+.tools/
+.hugo_build.lock
+.env
+.env.*
+*.key
+*.pem

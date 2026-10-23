@@ -1,0 +1,46 @@
+{{- define "main" }}
+{{- $edition := .File.BaseFileName -}}
+{{- $items := sort (where site.RegularPages "Params.edition" $edition) "Params.entryNo" "asc" -}}
+<header class="page-header">
+  <h1>{{ .Title }}</h1>
+  <div class="post-meta">
+    <span>{{ .Date.Format "2006-01-02" }}</span>
+    <span>{{ len $items }} 条</span>
+    {{- with .Params.window }}<span class="edition-window">{{ . }}</span>{{- end }}
+  </div>
+</header>
+
+{{- with .Params.directionNotes }}
+<section class="dir-notes">
+  <h2 class="section-title">各方向小结</h2>
+  <dl class="dir-notes__list">
+    {{- range . }}
+    <div class="dir-notes__row">
+      <dt>{{ .dir }}</dt>
+      <dd>{{ .text }}</dd>
+    </div>
+    {{- end }}
+  </dl>
+</section>
+{{- end }}
+
+<section class="edition-entries">
+  <h2 class="section-title">本期条目</h2>
+  <ol class="entry-list entry-list--num">
+    {{- range $items }}
+    <li class="entry-item">
+      <a class="entry-item__title" href="{{ .RelPermalink }}">{{ .Title }}</a>
+      <div class="entry-item__meta">
+        <span class="badge badge--date">{{ .Params.eventDate }}</span>
+        {{- range .GetTerms "tags" }}<a class="badge badge--dir" href="{{ .RelPermalink }}">{{ .Title }}</a>{{- end }}
+        {{- range .Params.flags }}<span class="badge badge--flag">{{ . }}</span>{{- end }}
+      </div>
+    </li>
+    {{- end }}
+  </ol>
+</section>
+
+<div class="post-content md-content edition-body">
+  {{- partial "anchored_headings.html" .Content -}}
+</div>
+{{- end }}{{- /* end main */ -}}

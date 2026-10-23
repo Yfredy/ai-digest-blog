@@ -1,0 +1,106 @@
+baseURL: "https://yfredy.github.io/ai-digest-blog/"
+languageCode: "zh-CN"
+defaultContentLanguage: "zh"
+hasCJKLanguage: true
+timeZone: "Asia/Shanghai"
+title: "AI 前沿动态速递"
+theme: "PaperMod"
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: true
+buildExpired: false
+enableGitInfo: false
+
+pagination:
+  pagerSize: 12
+
+minify:
+  disableXML: true
+
+taxonomies:
+  tag: tags
+  category: categories
+  entity: entities
+
+outputs:
+  home: ["html", "json", "rss"]
+  section: ["html", "rss"]
+  term: ["html", "rss"]
+
+menus:
+  main:
+    - name: "首页"
+      url: "/"
+      weight: -10
+    - name: "动态库"
+      url: "/library/"
+      weight: 10
+    - name: "搜索"
+      url: "/search/"
+      weight: 20
+    - name: "归档"
+      url: "/archives/"
+      weight: 30
+    - name: "方向"
+      url: "/tags/"
+      weight: 40
+    - name: "主体"
+      url: "/entities/"
+      weight: 50
+    - name: "关于"
+      url: "/about/"
+      weight: 60
+    - name: "资源"
+      url: "/links/"
+      weight: 70
+
+params:
+  description: "每日 AI 领域重要动态的结构化速递：发生了什么 / 为什么值得关注 / 方向 / 来源，逐条独立成页可检索。"
+  keywords: [AI, 人工智能, Agent, AI coding, AIOS, AI Audio, AI Multimedia, 开源权重, 算力, 每日动态]
+  author: "姚越"
+  DateFormat: "2006-01-02"
+  mainSections: ["posts", "editions"]
+  defaultTheme: "auto"
+  disableThemeToggle: false
+  disableSpecial1stPost: true
+  disableScrollToTop: false
+  ShowReadingTime: false
+  ShowWordCount: false
+  ShowShareButtons: false
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: false
+  ShowRssButtonInSectionTermList: true
+  ShowFullTextinRSS: false
+  ShowToc: true
+  TocOpen: false
+  UseHugoToc: true
+  assets:
+    disableHLJS: true
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 2
+    keys: ["title", "content", "summary"]
+  profileMode:
+    enabled: false
+  homeInfoParams:
+    Title: "AI 前沿动态速递"
+    Content: "每天一份 AI 领域重要动态，拆成可检索、可反查来源的独立条目。"
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: false
+    extensions:
+      table: true
+      strikethrough: true
+      linkify: false
+  tableOfContents:
+    startLevel: 2
+    endLevel: 3
+    ordered: false

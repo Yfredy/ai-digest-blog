@@ -1,0 +1,75 @@
+name: 部署 Hugo 站点到 GitHub Pages
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: 内容与模板校验
+        run: npm test
+
+  build:
+    needs: verify
+    runs-on: ubuntu-latest
+    env:
+      HUGO_VERSION: "0.160.1"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          fetch-depth: 0
+
+      - uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: "0.160.1"
+          extended: true
+
+      - name: 构建站点
+        run: hugo --gc --minify --baseURL "${{ vars.HUGO_BASE_URL || 'https://yfredy.github.io/ai-digest-blog/' }}"
+
+      - name: 检查产物
+        run: |
+          test -f public/index.html
+          test -f public/library/index.html
+          test -f public/search/index.html
+          test -f public/archives/index.html
+          test -f public/tags/index.html
+          test -f public/entities/index.html
+          test -f public/index.json
+          echo "产物页面数：$(find public -name index.html | wc -l)"
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+
+  deploy:
+    needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

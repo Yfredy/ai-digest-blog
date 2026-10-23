@@ -1,0 +1,453 @@
+/* 速递站点专属样式：仅使用 PaperMod 的主题变量，随明暗主题自动切换 */
+
+.section-title {
+    margin: 1.6em 0 .6em;
+    font-size: 1.05rem;
+    letter-spacing: .02em;
+    color: var(--secondary);
+    text-transform: none;
+}
+
+/* ---------- 首页 hero ---------- */
+.hero-card {
+    padding: 1.2em 0 .4em;
+    border-bottom: 1px solid var(--border);
+}
+
+.hero-card__title {
+    margin: 0 0 .3em;
+    font-size: 1.9rem;
+    line-height: 1.25;
+}
+
+.hero-card__lead {
+    margin: 0 0 .9em;
+    max-width: 62ch;
+    color: var(--content);
+}
+
+.hero-card__stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5em 1.4em;
+    margin-bottom: 1em;
+    font-size: .92rem;
+    color: var(--secondary);
+}
+
+.hero-card__stats .stat b {
+    color: var(--primary);
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-right: .18em;
+}
+
+.hero-card__cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .6em;
+    margin-bottom: .4em;
+}
+
+.btn {
+    display: inline-block;
+    padding: .42em .95em;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: var(--entry);
+    color: var(--primary);
+    font-size: .9rem;
+    text-decoration: none;
+}
+
+.btn:hover {
+    border-color: var(--primary);
+    background: var(--code-bg);
+}
+
+.btn--primary {
+    background: var(--primary);
+    color: var(--theme);
+    border-color: var(--primary);
+}
+
+.btn--ghost {
+    background: transparent;
+    color: var(--secondary);
+}
+
+/* ---------- 方向导航卡 ---------- */
+.dir-nav__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: .7em;
+}
+
+.dir-card {
+    display: flex;
+    flex-direction: column;
+    gap: .25em;
+    padding: .85em 1em;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--entry);
+    text-decoration: none;
+}
+
+.dir-card:hover {
+    border-color: var(--primary);
+}
+
+.dir-card__name {
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.dir-card__count {
+    font-size: .82rem;
+    color: var(--secondary);
+}
+
+.dir-card__desc {
+    font-size: .84rem;
+    line-height: 1.5;
+    color: var(--content);
+}
+
+/* ---------- 条目列表（首页 / 期次页） ---------- */
+.entry-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.entry-list--num {
+    list-style: decimal inside;
+}
+
+.entry-item {
+    padding: .7em 0;
+    border-bottom: 1px dashed var(--border);
+}
+
+.entry-item__title {
+    font-weight: 600;
+    color: var(--primary);
+    text-decoration: none;
+    line-height: 1.5;
+}
+
+.entry-item__title:hover {
+    text-decoration: underline;
+}
+
+.entry-item__meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: .35em;
+    margin-top: .35em;
+    font-size: .8rem;
+    color: var(--secondary);
+}
+
+.latest__more {
+    margin: 1em 0 0;
+    font-size: .9rem;
+}
+
+/* ---------- 徽标 ---------- */
+.badge {
+    display: inline-block;
+    padding: .1em .55em;
+    border-radius: 6px;
+    font-size: .76rem;
+    line-height: 1.6;
+    text-decoration: none;
+    border: 1px solid var(--border);
+    color: var(--secondary);
+    background: var(--code-bg);
+}
+
+.badge--date {
+    font-variant-numeric: tabular-nums;
+    color: var(--content);
+}
+
+.badge--dir {
+    color: var(--theme);
+    background: var(--primary);
+    border-color: var(--primary);
+}
+
+.badge--cat {
+    color: var(--primary);
+    background: transparent;
+}
+
+.badge--ent {
+    background: var(--entry);
+}
+
+.badge--flag {
+    color: #8a4b00;
+    background: #ffeccd;
+    border-color: #f3d5a8;
+}
+
+.inverted .badge--flag,
+.dark .badge--flag {
+    color: #ffd9a0;
+    background: #4a3413;
+    border-color: #6b4c1c;
+}
+
+/* ---------- 动态库筛选 ---------- */
+.filters {
+    margin: 1em 0 1.4em;
+    padding: 1em;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--entry);
+}
+
+.filters__row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: .5em;
+    margin-bottom: .7em;
+}
+
+.filters__row--selects {
+    gap: .8em;
+}
+
+.filters__label {
+    min-width: 3.2em;
+    font-size: .82rem;
+    color: var(--secondary);
+}
+
+.chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4em;
+}
+
+.chips--scroll {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: .3em;
+}
+
+.chip {
+    padding: .28em .8em;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: var(--theme);
+    color: var(--content);
+    font-size: .84rem;
+    cursor: pointer;
+}
+
+.chip i {
+    font-style: normal;
+    color: var(--secondary);
+    margin-left: .25em;
+    font-size: .76rem;
+}
+
+.chip.is-active {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: var(--theme);
+}
+
+.field {
+    display: flex;
+    align-items: center;
+    gap: .4em;
+    font-size: .84rem;
+    color: var(--secondary);
+}
+
+.field--grow {
+    flex: 1 1 220px;
+}
+
+.field input,
+.field select {
+    padding: .35em .6em;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--theme);
+    color: var(--content);
+    font-size: .88rem;
+    max-width: 100%;
+}
+
+.field input {
+    flex: 1 1 auto;
+}
+
+.filters__count {
+    margin: .2em 0 0;
+    font-size: .84rem;
+    color: var(--secondary);
+}
+
+.notice {
+    padding: .7em 1em;
+    border-left: 3px solid var(--primary);
+    background: var(--code-bg);
+    font-size: .88rem;
+}
+
+/* ---------- 动态库卡片 ---------- */
+.lib {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: .8em;
+}
+
+.lib__item {
+    padding: .9em 1em;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--entry);
+}
+
+.lib__item[hidden] {
+    display: none;
+}
+
+.lib__title {
+    font-weight: 600;
+    color: var(--primary);
+    text-decoration: none;
+    line-height: 1.5;
+}
+
+.lib__title:hover {
+    text-decoration: underline;
+}
+
+.lib__meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: .35em;
+    margin: .45em 0 .3em;
+    font-size: .78rem;
+    color: var(--secondary);
+}
+
+.lib__src,
+.lib__ed {
+    margin-left: auto;
+}
+
+.lib__brief {
+    margin: 0;
+    font-size: .88rem;
+    line-height: 1.65;
+    color: var(--content);
+}
+
+/* ---------- 期次页 ---------- */
+.edition-window {
+    color: var(--secondary);
+}
+
+.dir-notes__list {
+    margin: 0;
+    display: grid;
+    gap: .5em;
+}
+
+.dir-notes__row {
+    display: grid;
+    grid-template-columns: 7.5em 1fr;
+    gap: .8em;
+    padding-bottom: .5em;
+    border-bottom: 1px dashed var(--border);
+}
+
+.dir-notes__row dt {
+    font-weight: 700;
+    color: var(--primary);
+    font-size: .9rem;
+}
+
+.dir-notes__row dd {
+    margin: 0;
+    font-size: .9rem;
+    line-height: 1.65;
+}
+
+.edition-entries {
+    margin-bottom: 1.4em;
+}
+
+.edition-body {
+    padding-top: .5em;
+    border-top: 2px solid var(--border);
+}
+
+/* ---------- 条目档案面板 ---------- */
+.entry-facts {
+    margin-top: 2em;
+    padding: 1em 1.1em;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--entry);
+}
+
+.entry-facts__title {
+    margin: 0 0 .7em;
+    font-size: .95rem;
+    color: var(--secondary);
+}
+
+.entry-facts__grid {
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: .55em 1.2em;
+}
+
+.entry-facts__grid dt {
+    font-size: .76rem;
+    color: var(--secondary);
+    letter-spacing: .03em;
+}
+
+.entry-facts__grid dd {
+    margin: .1em 0 0;
+    font-size: .88rem;
+    color: var(--content);
+}
+
+/* ---------- 术语页 / 分类页 ---------- */
+.terms-tags li a {
+    text-decoration: none;
+}
+
+@media (max-width: 640px) {
+    .hero-card__title {
+        font-size: 1.5rem;
+    }
+
+    .lib__src,
+    .lib__ed {
+        margin-left: 0;
+    }
+
+    .dir-notes__row {
+        grid-template-columns: 1fr;
+        gap: .2em;
+    }
+}

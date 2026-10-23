@@ -1,0 +1,95 @@
+{{- define "main" }}
+{{- $entries := where site.RegularPages "Params.kind" "entry" -}}
+{{- $editions := sort (where site.RegularPages "Params.kind" "edition") "Date" "desc" -}}
+<header class="page-header">
+  <h1>{{ .Title }}</h1>
+  {{- with .Description }}
+  <div class="post-description">{{ . }}</div>
+  {{- end }}
+</header>
+
+<div class="filters" id="filters">
+  <div class="filters__row">
+    <span class="filters__label">方向</span>
+    <div class="chips" data-group="dir">
+      <button class="chip is-active" data-value="" type="button">全部</button>
+      {{- range site.Taxonomies.tags.ByCount }}
+      {{- $term := .Page.Data.Term }}
+      {{- if ne $term "日报" }}
+      <button class="chip" data-value="{{ $term }}" type="button">{{ $term }} <i>{{ .Count }}</i></button>
+      {{- end }}
+      {{- end }}
+    </div>
+  </div>
+  <div class="filters__row">
+    <span class="filters__label">细分</span>
+    <div class="chips chips--scroll" data-group="cat">
+      <button class="chip is-active" data-value="" type="button">全部</button>
+      {{- range site.Taxonomies.categories.ByCount }}
+      {{- $term := .Page.Data.Term }}
+      <button class="chip" data-value="{{ $term }}" type="button">{{ $term }} <i>{{ .Count }}</i></button>
+      {{- end }}
+    </div>
+  </div>
+  <div class="filters__row filters__row--selects">
+    <label class="field">主体
+      <select id="f-ent">
+        <option value="">全部</option>
+        {{- range site.Taxonomies.entities.ByCount }}
+        {{- $term := .Page.Data.Term }}
+        <option value="{{ $term }}">{{ $term }}（{{ .Count }}）</option>
+        {{- end }}
+      </select>
+    </label>
+    <label class="field">收录期次
+      <select id="f-ed">
+        <option value="">全部</option>
+        {{- range $editions }}
+        <option value="{{ .Params.edition }}">{{ .Params.edition }}（{{ .Params.entryCount }}）</option>
+        {{- end }}
+      </select>
+    </label>
+    <label class="field">标记
+      <select id="f-flag">
+        <option value="">全部</option>
+        <option value="补录">补录</option>
+        <option value="后续进展">后续进展</option>
+        <option value="纠正">纠正</option>
+      </select>
+    </label>
+    <label class="field field--grow">关键词
+      <input id="f-q" type="search" placeholder="模型名、公司、数字…" autocomplete="off">
+    </label>
+    <button class="btn btn--ghost" id="f-reset" type="button">重置</button>
+  </div>
+  <p class="filters__count" id="f-count" aria-live="polite"></p>
+</div>
+
+<noscript><p class="notice">动态库的筛选需要 JavaScript；关闭脚本时可直接使用上方「方向」标签页或<a href="{{ "search/" | relURL }}">搜索页</a>。</p></noscript>
+
+<ul class="lib" id="lib">
+  {{- range sort $entries "Date" "desc" }}
+  {{- $ed := site.GetPage (printf "/editions/%s" .Params.edition) }}
+  <li class="lib__item"
+      data-dir="{{ with .Params.tags }}{{ delimit . "|" }}{{ end }}"
+      data-cat="{{ with .Params.categories }}{{ delimit . "|" }}{{ end }}"
+      data-ent="{{ with .Params.entities }}{{ delimit . "|" }}{{ end }}"
+      data-ed="{{ .Params.edition }}"
+      data-flag="{{ with .Params.flags }}{{ delimit . "|" }}{{ end }}"
+      data-date="{{ .Params.eventDate }}">
+    <div class="lib__head">
+      <a class="lib__title" href="{{ .RelPermalink }}">{{ .Title }}</a>
+    </div>
+    <div class="lib__meta">
+      <span class="badge badge--date">{{ .Params.eventDate }}</span>
+      {{- range .GetTerms "tags" }}<a class="badge badge--dir" href="{{ .RelPermalink }}">{{ .Title }}</a>{{- end }}
+      {{- range .GetTerms "entities" }}<a class="badge badge--ent" href="{{ .RelPermalink }}">{{ .Title }}</a>{{- end }}
+      {{- range .Params.flags }}<span class="badge badge--flag">{{ . }}</span>{{- end }}
+      <span class="lib__src">{{ len .Params.sources }} 个来源</span>
+      {{- with $ed }}<span class="lib__ed">收录于 <a href="{{ .RelPermalink }}">{{ .Params.edition }}</a></span>{{- end }}
+    </div>
+    <p class="lib__brief">{{ truncate 150 .Plain }}</p>
+  </li>
+  {{- end }}
+</ul>
+{{- end }}{{- /* end main */ -}}
