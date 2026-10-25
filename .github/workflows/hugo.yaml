@@ -1,8 +1,7 @@
 name: 部署 Hugo 站点到 GitHub Pages
 
 on:
-  push:
-    branches: ["main"]
+  # 线上发布走 Qoder Sites；Pages 部署保留为手动触发，避免每次推送都因未设置 HUGO_BASE_URL 失败
   workflow_dispatch:
 
 permissions:
