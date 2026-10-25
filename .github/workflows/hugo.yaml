@@ -1,7 +1,9 @@
 name: 部署 Hugo 站点到 GitHub Pages
 
 on:
-  # 线上发布走 Qoder Sites；Pages 部署保留为手动触发，避免每次推送都因未设置 HUGO_BASE_URL 失败
+  # 推送只跑校验；线上发布走 Qoder Sites，Pages 部署保留为手动触发
+  push:
+    branches: ["main"]
   workflow_dispatch:
 
 permissions:
@@ -30,6 +32,8 @@ jobs:
 
   build:
     needs: verify
+    # 只有手动触发才构建并部署 Pages；推送只跑上面的内容校验
+    if: github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     env:
       HUGO_VERSION: "0.160.1"
