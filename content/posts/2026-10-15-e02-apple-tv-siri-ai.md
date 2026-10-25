@@ -5,7 +5,7 @@ slug: 2026-10-15-e02-apple-tv-siri-ai
 tags: ["AIOS"]
 categories: ["端侧AI系统"]
 entities: ["Apple", "微软与GitHub"]
-summary: "苹果 10 月 14 日新闻室发布新一代（第 4 代）Apple TV 4K：售价 $299，11 月 13 日发售，核心变化是让 Siri AI 提供「全屏、对话式」的观影与设备操控体验，并配合新推出的 HomeView 智能屏把家庭娱乐与家居管理统一到会话式入口。"
+summary: "苹果 10 月 14 日新闻室发布新一代（第 4 代）Apple TV 4K：售价 $299，11 月 13 日发售，核心变化是让 Siri AI 提供「全屏、对话式」的观影与设备操控体验，并…"
 weight: 998
 params:
   kind: entry

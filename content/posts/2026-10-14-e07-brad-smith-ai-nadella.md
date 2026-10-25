@@ -5,7 +5,7 @@ slug: 2026-10-14-e07-brad-smith-ai-nadella
 tags: ["泛AI"]
 categories: ["政策", "治理"]
 entities: ["微软与GitHub", "监管与政府机构"]
-summary: "后续进展｜后续进展：微软总裁 Brad Smith 呼吁全球 AI 安全规则（关联台账 10-10 Nadella「紧急刹车」）"
+summary: "Brad Smith 在接受 BBC 采访（10 月 12 日播出）中称「如今你的洗衣机受到的安全规则比 AI 还多，每一盒牛奶都有强制安全标准」，呼吁建立全球性 AI 安全规则：强制事故报告…"
 weight: 993
 params:
   kind: entry
@@ -18,8 +18,6 @@ params:
     - { title: "Reuters", url: "https://www.reuters.com/legal/litigation/microsoft-president-says-milk-faces-more-regulation-than-ai-2026-10-12/" }
     - { title: "The Hill", url: "https://thehill.com/policy/technology/6142987-microsoft-president-ai-faces-fewer-safety-requirements-than-milk-washing-machines/" }
 ---
-
-> 一句话要点：后续进展｜后续进展：微软总裁 Brad Smith 呼吁全球 AI 安全规则（关联台账 10-10 Nadella「紧急刹车」）
 
 ## 发生了什么
 

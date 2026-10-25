@@ -5,7 +5,7 @@ slug: 2026-10-11-e07-sakana-ai-llm
 tags: ["泛AI"]
 categories: ["科研", "Agent应用"]
 entities: ["SakanaAI", "OpenAI"]
-summary: "10 月 10 日报道（MarkTechPost，另见 llm-stats 当日头条）：日本 Sakana AI 展示了一套以「错误检测」为核心的 LLM 辅助同行评审系统，在覆盖 257 篇论文的评测中捕获了 73% 的核心论断（core claim）错误。Sakana 同时运"
+summary: "10 月 10 日报道（MarkTechPost，另见 llm-stats 当日头条）：日本 Sakana AI 展示了一套以「错误检测」为核心的 LLM 辅助同行评审系统，在覆盖 257 篇…"
 weight: 993
 params:
   kind: entry

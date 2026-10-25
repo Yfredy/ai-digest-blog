@@ -5,7 +5,7 @@ slug: 2026-10-19-e02-vast-edenlive-fps
 tags: ["AI Multimedia"]
 categories: ["世界模型", "开源"]
 entities: ["VAST", "腾讯", "智源FlagOS"]
-summary: "VAST-AI 于 10 月 18 日发布并开源实时世界模型 EdenLive，代码开源于 github.com/VAST-AI-Research/EdenLive，权重在 huggingface.co/VAST-AI/EdenLive。核心规格是单张消费级显卡（RTX 5090"
+summary: "VAST-AI 于 10 月 18 日发布并开源实时世界模型 EdenLive，代码开源于 github.com/VAST-AI-Research/EdenLive，权重在 huggingfa…"
 weight: 998
 params:
   kind: entry

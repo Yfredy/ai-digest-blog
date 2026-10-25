@@ -5,7 +5,7 @@ slug: 2026-10-11-e06-sourcegraph-amp-claude-pro-max
 tags: ["AI coding"]
 categories: []
 entities: ["Anthropic", "Sourcegraph"]
-summary: "10 月 10 日，Sourcegraph 旗下编程 Agent Amp 官方公告「Use Your Claude Plan in Amp」：Claude Pro/Max 订阅用户可直接在自己的 Amp 环境中使用 Claude 订阅额度，功能免费、对所有用户开放。"
+summary: "10 月 10 日，Sourcegraph 旗下编程 Agent Amp 官方公告「Use Your Claude Plan in Amp」：Claude Pro/Max 订阅用户可直接在自己…"
 weight: 994
 params:
   kind: entry

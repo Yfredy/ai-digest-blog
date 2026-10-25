@@ -45,6 +45,15 @@ npm run serve      # 本地预览
 
 `npm test` 等价于 `npm run verify`，CI 的 verify job 会先跑它，失败则不构建、不部署。
 
+### 托管到 Qoder Sites（与 Pages 并存的另一套产物）
+
+```bash
+HUGO_BIN=.tools/hugo.exe SITES_FEED_BASE=https://<站点域名> npm run build:sites
+npm run verify:links   # 第三道门禁：每个站内链接都要落成真实文件
+```
+
+`dist/`（已 gitignore）用 `baseURL=/` + `uglyURLs=true` 导出：托管在域名根路径且不做目录 index 回退，所以链接必须带 `.html`；RSS/sitemap/robots 的地址由 `SITES_FEED_BASE` 补成绝对地址。Pages 版仍是仓库默认的 `/ai-digest-blog/` 子路径 + 干净 URL。
+
 ## 内容模型
 
 日报里的每条 `## N. 标题` 转成一篇 post，front matter 含：

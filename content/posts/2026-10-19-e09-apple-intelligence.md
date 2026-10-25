@@ -5,7 +5,7 @@ slug: 2026-10-19-e09-apple-intelligence
 tags: ["AIOS", "泛AI"]
 categories: ["端侧", "政策"]
 entities: ["Apple", "NVIDIA", "阿里与Qwen"]
-summary: "补录｜【补录 10-15～16】Apple Intelligence 获批进入中国，10 月底前推出测试版"
+summary: "蒂姆·库克 10 月 15 日接受澎湃新闻采访确认 Apple Intelligence 已获中国批准，10 月 16 日起外媒（China Daily、TechNode、EqualOcean…"
 weight: 991
 params:
   kind: entry
@@ -19,8 +19,6 @@ params:
     - { title: "EqualOcean", url: "https://www.equalocean.com/" }
     - { title: "量子位", url: "https://www.qbitai.com/" }
 ---
-
-> 一句话要点：补录｜【补录 10-15～16】Apple Intelligence 获批进入中国，10 月底前推出测试版
 
 ## 发生了什么
 

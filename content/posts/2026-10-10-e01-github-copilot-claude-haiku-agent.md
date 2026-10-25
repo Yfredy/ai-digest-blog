@@ -5,7 +5,7 @@ slug: 2026-10-10-e01-github-copilot-claude-haiku-agent
 tags: ["AI coding"]
 categories: []
 entities: ["微软与GitHub", "Anthropic"]
-summary: "GitHub 于 10 月 9 日发布 Copilot 周度更新汇总：Claude Haiku 5.5（Anthropic 10 月 7 日发布的模型）正式上架 Copilot Pro/Max 档位，可在 VS Code 等环境选用；Copilot CLI 的本地沙箱（real-"
+summary: "GitHub 于 10 月 9 日发布 Copilot 周度更新汇总：Claude Haiku 5.5（Anthropic 10 月 7 日发布的模型）正式上架 Copilot Pro/Max…"
 weight: 999
 params:
   kind: entry

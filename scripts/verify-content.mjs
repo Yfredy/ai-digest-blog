@@ -31,10 +31,14 @@ function walk(dir, out = []) {
 
 const cfg = read("hugo.yaml");
 
-// 1. baseURL 必须是 https 且以 / 结尾
+// 1. baseURL：根相对 "/"（托管与域名无关）或 https 绝对地址且以 / 结尾；不允许写个人账号地址
 const base = (cfg.match(/^baseURL:\s*["']?([^"'\n]+)["']?/m) || [, ""])[1];
-if (!/^https:\/\//.test(base) || !base.endsWith("/")) problems.push(`hugo.yaml baseURL 异常：${base || "(缺失)"}`);
-else info.push(`baseURL=${base}`);
+if (base !== "/" && (!/^https:\/\//.test(base) || !base.endsWith("/"))) {
+  problems.push(`hugo.yaml baseURL 异常：${base || "(缺失)"}（应为 "/" 或 https 绝对地址）`);
+} else info.push(`baseURL=${base}`);
+
+// 1b. 站点不署名个人：params.author 必须缺席（公开产物会带上它）
+if (/^\s{2}author:\s*["']?\S/m.test(cfg)) problems.push("hugo.yaml params.author 不应填写个人姓名（公开站会输出 meta/JSON-LD 署名）");
 
 // 2. 主题存在且为子模块
 if (!existsSync(join(ROOT, "themes/PaperMod/theme.toml"))) problems.push("themes/PaperMod 缺失（需 git submodule）");

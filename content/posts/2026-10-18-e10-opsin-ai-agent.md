@@ -5,7 +5,7 @@ slug: 2026-10-18-e10-opsin-ai-agent
 tags: ["Agent", "泛AI"]
 categories: ["治理", "融资"]
 entities: ["微软与GitHub", "OpenAI", "Anthropic", "监管与政府机构"]
-summary: "补录｜【补录 10-15～16】Opsin 融资 2100 万美元：专做企业 AI Agent 风险测绘与约束"
+summary: "圣何塞的 AI 治理与安全初创 Opsin 于 10 月 15 日宣布、16 日广泛报道，完成 2100 万美元融资，由 SYN Ventures 与 Race Capital 领投。"
 weight: 990
 params:
   kind: entry
@@ -17,8 +17,6 @@ params:
     - { title: "Opsin 官方博客", url: "https://www.opsinsecurity.com/blog/opsin-raises-21m" }
     - { title: "Yahoo Finance", url: "https://finance.yahoo.com/technology/ai/articles/opsin-raises-21m-keep-ai-133000746.html" }
 ---
-
-> 一句话要点：补录｜【补录 10-15～16】Opsin 融资 2100 万美元：专做企业 AI Agent 风险测绘与约束
 
 ## 发生了什么
 

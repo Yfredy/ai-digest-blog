@@ -5,7 +5,7 @@ slug: 2026-10-20-e05-servicenow-ai-passport
 tags: ["Agent"]
 categories: ["治理", "身份"]
 entities: ["ServiceNow", "微软与GitHub", "腾讯", "监管与政府机构"]
-summary: "补录｜【补录 10-16】ServiceNow AI Passport：给智能体签发运行时可验证的加密身份"
+summary: "ServiceNow 于 10 月 15～16 日推出 AI Passport，作为其「Super Intelligence Control Tower」治理组件的一部分：为一-party 与…"
 weight: 995
 params:
   kind: entry
@@ -18,8 +18,6 @@ params:
     - { title: "Techzine", url: "https://www.techzine.eu/news/applications/145011/servicenow-provides-ai-agents-with-a-passport-for-runtime-control/" }
     - { title: "CIO", url: "https://www.cio.com/article/4235863/servicenow-makes-it-easier-to-build-ai-agents-gives-them-verifiable-identities.html" }
 ---
-
-> 一句话要点：补录｜【补录 10-16】ServiceNow AI Passport：给智能体签发运行时可验证的加密身份
 
 ## 发生了什么
 

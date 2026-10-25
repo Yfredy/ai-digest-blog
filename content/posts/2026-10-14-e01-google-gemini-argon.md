@@ -5,7 +5,7 @@ slug: 2026-10-14-e01-google-gemini-argon
 tags: ["AI coding", "泛AI"]
 categories: ["模型发布"]
 entities: ["Google与Gemini", "OpenAI", "Anthropic"]
-summary: "Google 10 月 13 日正式全球推出 Gemini 4 Argon：1M token 上下文，AA 智能指数 53，DeepSWE 77.9%、AutomationBench 51.3%，主打长程软件工程、企业知识工作与网络安全场景；TPU 训练。渠道覆盖 Gemini"
+summary: "Google 10 月 13 日正式全球推出 Gemini 4 Argon：1M token 上下文，AA 智能指数 53，DeepSWE 77.9%、AutomationBench 51.3…"
 weight: 999
 params:
   kind: entry

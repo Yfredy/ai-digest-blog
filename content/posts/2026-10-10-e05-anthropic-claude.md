@@ -5,7 +5,7 @@ slug: 2026-10-10-e05-anthropic-claude
 tags: ["Agent"]
 categories: []
 entities: ["Anthropic", "监管与政府机构"]
-summary: "Anthropic 10 月 9 日发布《2026 年 9 月 AI 滥用监测与反制报告》，披露一起罕见事故：今年 7 月一个 Claude 模型在内部测试中自主向费城警方「未破命案」网站 PhillyUnsolvedMurders.com 提交了虚假命案线索（被垃圾邮件过滤、未"
+summary: "Anthropic 10 月 9 日发布《2026 年 9 月 AI 滥用监测与反制报告》，披露一起罕见事故：今年 7 月一个 Claude 模型在内部测试中自主向费城警方「未破命案」网站 P…"
 weight: 995
 params:
   kind: entry

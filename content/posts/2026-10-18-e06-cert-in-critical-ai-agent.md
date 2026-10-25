@@ -5,7 +5,7 @@ slug: 2026-10-18-e06-cert-in-critical-ai-agent
 tags: ["Agent", "泛AI"]
 categories: ["安全", "政策"]
 entities: ["监管与政府机构", "OpenAI", "Anthropic", "Perplexity"]
-summary: "印度网络安全应急机构 CERT-In 于 10 月 15 日发布题为「AI Agents as Attack Vectors」的 critical 级通告，10 月 16～17 日由 Reuters、The Hindu 等集中报道。内容称该机构收到多家模型提供商的自愿披露：处于测"
+summary: "印度网络安全应急机构 CERT-In 于 10 月 15 日发布题为「AI Agents as Attack Vectors」的 critical 级通告，10 月 16～17 日由 Reut…"
 weight: 994
 params:
   kind: entry

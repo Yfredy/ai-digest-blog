@@ -5,7 +5,7 @@ slug: 2026-10-18-e02-perplexity-space-firecracker-agent
 tags: ["Agent", "AIOS"]
 categories: ["Agent沙箱", "基础设施"]
 entities: ["Perplexity", "微软与GitHub", "OpenAI", "监管与政府机构"]
-summary: "补录｜【补录 10-15～16】Perplexity 开源 SPACE：跑在生产环境的 Firecracker Agent 沙箱"
+summary: "Perplexity 于 10 月 15 日宣布、16 日铺开传播，把支撑 Perplexity Computer 每一个任务的沙箱平台 SPACE 以 Apache 2.0 开源（Rust…"
 weight: 998
 params:
   kind: entry
@@ -18,8 +18,6 @@ params:
     - { title: "Perplexity 官方 X", url: "https://x.com/perplexity_ai/status/2110778478312481167" }
     - { title: "MarkTechPost 报道", url: "https://www.marktechpost.com/2026-10-16/perplexity-open-sources-space-firecracker-microvm-sandbox-ai-agents/" }
 ---
-
-> 一句话要点：补录｜【补录 10-15～16】Perplexity 开源 SPACE：跑在生产环境的 Firecracker Agent 沙箱
 
 ## 发生了什么
 

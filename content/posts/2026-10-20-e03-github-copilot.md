@@ -5,7 +5,7 @@ slug: 2026-10-20-e03-github-copilot
 tags: ["AI coding"]
 categories: []
 entities: ["微软与GitHub", "OpenAI", "Anthropic", "xAI与Grok"]
-summary: "后续进展｜GitHub Copilot 六款模型 10-19 退役生效：全系体验与全部计划范围内下线"
+summary: "GitHub 于 10 月 19 日按 9 月 18 日发布的公告执行本轮模型退役，下线 Gemini 3.7 Flash、GPT-5.5、GPT-5.4、GPT-5.4 mini、GPT-5…"
 weight: 997
 params:
   kind: entry
@@ -19,8 +19,6 @@ params:
     - { title: "退役清单与迁移指引", url: "https://qcode.cc/en/github-copilot-model-retirement-2026-10-19" }
     - { title: "社区讨论", url: "https://github.com/orgs/community/discussions/177743" }
 ---
-
-> 一句话要点：后续进展｜GitHub Copilot 六款模型 10-19 退役生效：全系体验与全部计划范围内下线
 
 ## 发生了什么
 

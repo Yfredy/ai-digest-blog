@@ -5,7 +5,7 @@ slug: 2026-10-16-e03-ntt-data-anthropic
 tags: ["泛AI"]
 categories: ["算力"]
 entities: ["Anthropic", "Google与Gemini", "监管与政府机构"]
-summary: "补录｜【补录】NTT Data 与 Anthropic 进入最后谈判：约 1 万亿日元建日本首座专用数据中心"
+summary: "日经 10 月 13 日独家（路透/每日新闻/The Information 跟进）：NTT Data 正与 Anthropic 进行最后阶段谈判，将在日本建设 Anthropic 首座专用数…"
 weight: 997
 params:
   kind: entry
@@ -18,8 +18,6 @@ params:
     - { title: "Nikkei Asia", url: "https://asia.nikkei.com/business/technology/artificial-intelligence/ntt-to-build-first-data-center-for-anthropic-in-japan" }
     - { title: "Mainichi", url: "https://mainichi.jp/english/articles/20261014/p2g/00m/0bu/029000c" }
 ---
-
-> 一句话要点：补录｜【补录】NTT Data 与 Anthropic 进入最后谈判：约 1 万亿日元建日本首座专用数据中心
 
 ## 发生了什么
 

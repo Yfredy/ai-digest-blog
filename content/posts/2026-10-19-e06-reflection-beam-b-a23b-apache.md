@@ -5,7 +5,7 @@ slug: 2026-10-19-e06-reflection-beam-b-a23b-apache
 tags: ["AI coding", "泛AI"]
 categories: ["开源权重"]
 entities: ["ReflectionAI", "Meta", "NVIDIA", "DeepSeek"]
-summary: "补录｜【补录 10-16】Reflection 开源 Beam：501B-A23B、1M 上下文的 Apache 2.0 编码模型"
+summary: "Reflection AI 于 10 月 16 日在 Hugging Face 以 Apache 2.0 开源 Beam-1.0-501B-A23B（官方博客 10-15 发布、权重 10-1…"
 weight: 994
 params:
   kind: entry
@@ -19,8 +19,6 @@ params:
     - { title: "Unite.AI", url: "https://www.unite.ai/" }
     - { title: "TechAI Wire", url: "https://techaewire.com/" }
 ---
-
-> 一句话要点：补录｜【补录 10-16】Reflection 开源 Beam：501B-A23B、1M 上下文的 Apache 2.0 编码模型
 
 ## 发生了什么
 

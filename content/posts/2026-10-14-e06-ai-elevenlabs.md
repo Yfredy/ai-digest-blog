@@ -5,7 +5,7 @@ slug: 2026-10-14-e06-ai-elevenlabs
 tags: ["AI Audio"]
 categories: []
 entities: ["ElevenLabs", "监管与政府机构", "Sourcegraph"]
-summary: "10 月 13 日，因进行性肌痉挛症（BESS）而失声的 Baroness Jane Campbell（Surbiton 的坎贝尔女男爵）在英国上议院一场卫生辩论中，使用 ElevenLabs 复刻本人年轻时声音的 AI 语音朗读其亲撰讲稿——这是英国议会两院历史上首次以 AI"
+summary: "10 月 13 日，因进行性肌痉挛症（BESS）而失声的 Baroness Jane Campbell（Surbiton 的坎贝尔女男爵）在英国上议院一场卫生辩论中，使用 ElevenLabs…"
 weight: 994
 params:
   kind: entry

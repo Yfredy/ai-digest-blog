@@ -5,7 +5,7 @@ slug: 2026-10-17-e06-github-agentic-autofix
 tags: ["AI coding", "Agent"]
 categories: ["安全"]
 entities: ["微软与GitHub"]
-summary: "补录｜【补录 10-15】GitHub：agentic autofix 转正，可一次修 25 条代码扫描告警"
+summary: "GitHub 10 月 15 日发布 changelog，把 7 月 10 日起的 public preview 转正——agentic autofix 正式 GA，面向 GitHub Ent…"
 weight: 994
 params:
   kind: entry
@@ -17,8 +17,6 @@ params:
     - { title: "GitHub Changelog（GA）", url: "https://github.blog/changelog/2026-10-15-agentic-autofix-for-code-scanning-alerts-general-availability/" }
     - { title: "GitHub Docs", url: "https://docs.github.com/en/code-security/concepts/code-scanning/autofix-for-code-scanning" }
 ---
-
-> 一句话要点：补录｜【补录 10-15】GitHub：agentic autofix 转正，可一次修 25 条代码扫描告警
 
 ## 发生了什么
 

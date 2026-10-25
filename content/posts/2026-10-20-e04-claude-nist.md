@@ -5,7 +5,7 @@ slug: 2026-10-20-e04-claude-nist
 tags: ["Agent", "泛AI"]
 categories: ["科研", "安全"]
 entities: ["Anthropic", "监管与政府机构", "SakanaAI"]
-summary: "补录｜【补录 10-16，10-17～19 持续发酵】Claude 还原 NIST 五条椭圆曲线种子的生成方式"
+summary: "Anthropic 前线红队（Frontier Red Team）10 月 16 日发布披露：一名员工把困扰密码学界二十多年的问题交给 Claude 内部研究模型、且未提供关键线索，模型在不到…"
 weight: 996
 params:
   kind: entry
@@ -20,8 +20,6 @@ params:
     - { title: "10-19 二次报道", url: "https://www.technology.org/2026/10/19/claude-nist-p256-curve-seeds-lrand48-timestamp/" }
     - { title: "量子位", url: "https://www.qbitai.com/2026/10/503910.html" }
 ---
-
-> 一句话要点：补录｜【补录 10-16，10-17～19 持续发酵】Claude 还原 NIST 五条椭圆曲线种子的生成方式
 
 ## 发生了什么
 

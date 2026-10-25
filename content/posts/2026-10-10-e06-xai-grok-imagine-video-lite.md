@@ -5,7 +5,7 @@ slug: 2026-10-10-e06-xai-grok-imagine-video-lite
 tags: ["AI Multimedia"]
 categories: []
 entities: ["xAI与Grok", "Google与Gemini"]
-summary: "xAI 于 10 月 8 日上线 Grok Imagine Video 1.5 Lite，是 Grok Imagine Video 1.5 的蒸馏低价档：支持文生视频与图生视频，输出 1-15 秒、覆盖 1:1/9:16/16:9 多种画幅，可接参考图； Artificial A"
+summary: "xAI 于 10 月 8 日上线 Grok Imagine Video 1.5 Lite，是 Grok Imagine Video 1.5 的蒸馏低价档：支持文生视频与图生视频，输出 1-15…"
 weight: 994
 params:
   kind: entry

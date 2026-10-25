@@ -1,0 +1,17 @@
+{{- define "main" }}
+{{- $entries := where site.RegularPages "Params.kind" "entry" -}}
+<header class="r-page-head">
+  <p class="r-kicker"><span class="r-dot" aria-hidden="true"></span>Search · 全站检索</p>
+  <h1>{{ .Title }}</h1>
+  {{- with .Description }}<p class="r-page-head__desc">{{ . }}</p>{{ end }}
+  <p class="r-page-head__meta">
+    <span><b>{{ len $entries }}</b> 条收录</span>
+    <span>标题、正文、来源均可检索</span>
+  </p>
+</header>
+
+<div id="searchbox" class="searchbox">
+  <input id="searchInput" disabled placeholder="搜索模型名、公司、事件关键词 ↵" aria-label="search" type="search" autocomplete="off" maxlength="64">
+  <ul id="searchResults" class="searchResults" aria-label="search results"></ul>
+</div>
+{{- end }}{{- /* end main */ -}}

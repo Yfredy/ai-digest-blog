@@ -5,7 +5,7 @@ slug: 2026-10-14-e05-torvalds-claude-code-linux-page
 tags: ["AI coding"]
 categories: []
 entities: ["Anthropic", "开源生态与研究"]
-summary: "Phoronix 10 月 11 日报道，Linus Torvalds 在 Linux 邮件列表提交 8 补丁的 page cache 改进系列，并称代码与测试主要由 Claude Code 起草：该改动跳过页缓存读取中的冗余 folio 引用，其个人机器上 8 线程小文件读吞吐"
+summary: "Phoronix 10 月 11 日报道，Linus Torvalds 在 Linux 邮件列表提交 8 补丁的 page cache 改进系列，并称代码与测试主要由 Claude Code…"
 weight: 995
 params:
   kind: entry

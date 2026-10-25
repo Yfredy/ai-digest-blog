@@ -5,7 +5,7 @@ slug: 2026-10-15-e03-claude-platform-opentelemetry-beta-agent
 tags: ["Agent"]
 categories: ["运行时基础设施"]
 entities: ["Anthropic", "开源生态与研究"]
-summary: "Anthropic 10 月 14 日在 Claude Platform 发布说明中上线两项能力：OpenTelemetry 导出进入 beta，可对 Messages API 请求与 Claude Managed Agents 会话做分布式追踪；同日发布 Scheduled d"
+summary: "Anthropic 10 月 14 日在 Claude Platform 发布说明中上线两项能力：OpenTelemetry 导出进入 beta，可对 Messages API 请求与 Cla…"
 weight: 997
 params:
   kind: entry

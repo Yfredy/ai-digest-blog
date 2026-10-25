@@ -5,7 +5,7 @@ slug: 2026-10-19-e07-hy-memory-sdk-memhub
 tags: ["AI coding", "Agent"]
 categories: ["记忆"]
 entities: ["腾讯", "OpenAI", "Anthropic", "阿里与Qwen"]
-summary: "补录｜【补录 10-15～16】腾讯混元开源 Hy Memory 2.0：模型 + SDK + MemHub 应用三层"
+summary: "腾讯混元 10 月 15 日放出权重、16 日正式官宣 Hy Memory 2.0，按三层开源（github.com/Tencent-Hunyuan/Hy-Memory，PyPI 包 hy-m…"
 weight: 993
 params:
   kind: entry
@@ -18,8 +18,6 @@ params:
     - { title: "IT之家", url: "https://www.ithome.com/" }
     - { title: "新浪财经", url: "https://finance.sina.com.cn/" }
 ---
-
-> 一句话要点：补录｜【补录 10-15～16】腾讯混元开源 Hy Memory 2.0：模型 + SDK + MemHub 应用三层
 
 ## 发生了什么
 

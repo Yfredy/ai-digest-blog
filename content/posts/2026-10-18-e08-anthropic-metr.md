@@ -5,7 +5,7 @@ slug: 2026-10-18-e08-anthropic-metr
 tags: ["Agent", "泛AI"]
 categories: ["治理", "评估基础设施"]
 entities: ["Anthropic", "开源生态与研究", "微软与GitHub", "监管与政府机构"]
-summary: "补录｜【补录 10-15～16】Anthropic 给 METR 六名评估员开通「员工级」内部访问"
+summary: "Anthropic 10 月 15 日发布《An update on independent evaluators》，宣布六名 METR 员工已获得「employee-like access」…"
 weight: 992
 params:
   kind: entry
@@ -16,8 +16,6 @@ params:
   sources:
     - { title: "Anthropic 官方公告", url: "https://www.anthropic.com/news/an-update-on-independent-evaluators" }
 ---
-
-> 一句话要点：补录｜【补录 10-15～16】Anthropic 给 METR 六名评估员开通「员工级」内部访问
 
 ## 发生了什么
 

@@ -5,7 +5,7 @@ slug: 2026-10-18-e04-nvidia-rtx-spark-gb
 tags: ["AIOS"]
 categories: ["端侧"]
 entities: ["NVIDIA", "微软与GitHub", "Perplexity", "字节与联发科"]
-summary: "补录｜【补录 10-16～17】NVIDIA RTX Spark 机型零售开售：$2,599 起、128GB 统一内存"
+summary: "RTX Spark PC 于 10 月 16 日开启预订并首发，17 日进入全球开售。该超级芯片为 Blackwell RTX GPU + 与 MediaTek 联合设计的 Arm 处理器，机…"
 weight: 996
 params:
   kind: entry
@@ -18,8 +18,6 @@ params:
     - { title: "NVIDIA 博客（全球开售）", url: "https://blogs.nvidia.com/blog/local-ai-rtx-spark-windows-laptops-celebration/" }
     - { title: "TechPowerUp", url: "https://www.techpowerup.com/353796/nvidia-rtx-spark-pcs-available-today-a-new-beginning-for-windows-pcs" }
 ---
-
-> 一句话要点：补录｜【补录 10-16～17】NVIDIA RTX Spark 机型零售开售：$2,599 起、128GB 统一内存
 
 ## 发生了什么
 

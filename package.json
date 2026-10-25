@@ -8,7 +8,12 @@
     "verify": "node scripts/verify-content.mjs && node scripts/verify-templates.mjs",
     "test": "node scripts/verify-content.mjs && node scripts/verify-templates.mjs",
     "build": "hugo --gc --minify",
-    "serve": "hugo server --buildDrafts --noMinify"
+    "serve": "hugo server --buildDrafts --noMinify",
+    "build:sites": "node scripts/build-sites.mjs",
+    "verify:links": "node scripts/verify-links.mjs dist",
+    "verify:privacy": "node scripts/verify-privacy.mjs dist",
+    "icons": "node scripts/make-icons.mjs",
+    "test:sites": "node scripts/build-sites.mjs && node scripts/verify-links.mjs dist && node scripts/verify-privacy.mjs dist"
   },
   "engines": {
     "node": ">=20"

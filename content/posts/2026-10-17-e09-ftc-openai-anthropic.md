@@ -5,7 +5,7 @@ slug: 2026-10-17-e09-ftc-openai-anthropic
 tags: ["泛AI"]
 categories: ["政策", "监管"]
 entities: ["OpenAI", "Anthropic", "监管与政府机构"]
-summary: "据 CBS News 与 Ars Technica 10 月 16 日报道，美国联邦贸易委员会已于 10 月 15 日向 OpenAI、Anthropic 发出传票，索取有关安全事件的材料，调查其是否构成对消费者的不公平或欺骗行为；这是该机构 9 月 30 日启动的行业性调查首次"
+summary: "据 CBS News 与 Ars Technica 10 月 16 日报道，美国联邦贸易委员会已于 10 月 15 日向 OpenAI、Anthropic 发出传票，索取有关安全事件的材料，调…"
 weight: 991
 params:
   kind: entry

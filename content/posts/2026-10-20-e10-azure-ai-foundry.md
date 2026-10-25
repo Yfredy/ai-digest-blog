@@ -5,7 +5,7 @@ slug: 2026-10-20-e10-azure-ai-foundry
 tags: ["AIOS", "泛AI"]
 categories: ["模型服务"]
 entities: ["微软与GitHub", "Meta", "NVIDIA", "ReflectionAI"]
-summary: "后续进展｜【后续进展】Azure AI Foundry 上架本周三款开源权重模型"
+summary: "微软 Azure AI Foundry 于 10 月 19 日发布「Model Mondays」周更，将本周新开源的三款模型纳入托管目录：Meta Muse Spark Open（10-16…"
 weight: 990
 params:
   kind: entry
@@ -16,8 +16,6 @@ params:
   sources:
     - { title: "Azure AI Foundry 博客（10-19）", url: "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/now-in-foundry-meta-muse-spark-open-nvidia-nemotron-3-5-super-vl-and-reflection-/4565899" }
 ---
-
-> 一句话要点：后续进展｜【后续进展】Azure AI Foundry 上架本周三款开源权重模型
 
 ## 发生了什么
 

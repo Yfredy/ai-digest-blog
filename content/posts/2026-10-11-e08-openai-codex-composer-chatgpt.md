@@ -5,7 +5,7 @@ slug: 2026-10-11-e08-openai-codex-composer-chatgpt
 tags: ["AI coding"]
 categories: []
 entities: ["OpenAI"]
-summary: "补录｜OpenAI Codex 上线 Composer 预测功能（ChatGPT 付费档先行）"
+summary: "OpenAI ChatGPT 发布说明（10 月 9 日更新）显示 Codex 新增「Composer predictions」：在用户输入任务描述阶段即预测并预备后续动作/上下文；"
 weight: 992
 params:
   kind: entry
@@ -17,8 +17,6 @@ params:
     - { title: "ChatGPT Release Notes", url: "https://help.openai.com/en/articles/6825453-chatgpt-release-notes" }
     - { title: "OpenAI Release Notes（releasebot 汇总）", url: "https://releasebot.io/updates/openai" }
 ---
-
-> 一句话要点：补录｜OpenAI Codex 上线 Composer 预测功能（ChatGPT 付费档先行）
 
 ## 发生了什么
 

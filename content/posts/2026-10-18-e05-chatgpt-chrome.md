@@ -5,7 +5,7 @@ slug: 2026-10-18-e05-chatgpt-chrome
 tags: ["Agent"]
 categories: ["计算机使用"]
 entities: ["OpenAI", "xAI与Grok", "Perplexity"]
-summary: "补录｜【补录 10-15～17】ChatGPT 可读并操控用户的 Chrome 标签页"
+summary: "OpenAI 于 10 月 15 日宣布 ChatGPT 的 Chrome 扩展升级（16～17 日随 X 官帖与桌面端铺开）：在 Chat 中可跨已打开标签页读取上下文（回答选中内容问题、自…"
 weight: 995
 params:
   kind: entry
@@ -18,8 +18,6 @@ params:
     - { title: "Unite.AI", url: "https://www.unite.ai/openai-brings-computer-use-to-chrome-with-chatgpt-tab-controls/" }
     - { title: "ChatGPT 桌面内置浏览器文档", url: "https://help.openai.com/en/articles/20001277-using-the-built-in-browser-in-the-chatgpt-desktop-app" }
 ---
-
-> 一句话要点：补录｜【补录 10-15～17】ChatGPT 可读并操控用户的 Chrome 标签页
 
 ## 发生了什么
 

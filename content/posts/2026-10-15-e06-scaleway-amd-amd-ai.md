@@ -5,7 +5,7 @@ slug: 2026-10-15-e06-scaleway-amd-amd-ai
 tags: ["泛AI"]
 categories: ["算力"]
 entities: ["Scaleway与AMD", "NVIDIA"]
-summary: "补录｜【补录】Scaleway × AMD：欧洲首台商用 AMD AI 超算落地瑞典"
+summary: "法国云厂商 Scaleway 10 月 13 日宣布在其法国本土以外的首座数据中心——瑞典——建设 AMD Instinct MI355X GPU 驱动的 AI 超算，配 ROCm 开放软件栈…"
 weight: 994
 params:
   kind: entry
@@ -17,8 +17,6 @@ params:
     - { title: "Scaleway 官方", url: "https://www.scaleway.com/en/news/scaleway-expands-ai-infrastructure-in-europe-with-new-amd-instinct-gpu-based-supercomputer-in-sweden/" }
     - { title: "Reuters", url: "https://www.reuters.com/business/media-telecom/scaleway-build-amd-powered-ai-supercomputer-sweden-2026-10-13/" }
 ---
-
-> 一句话要点：补录｜【补录】Scaleway × AMD：欧洲首台商用 AMD AI 超算落地瑞典
 
 ## 发生了什么
 

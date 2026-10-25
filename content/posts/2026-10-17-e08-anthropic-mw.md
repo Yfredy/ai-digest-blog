@@ -5,7 +5,7 @@ slug: 2026-10-17-e08-anthropic-mw
 tags: ["泛AI"]
 categories: ["算力", "基建"]
 entities: ["Anthropic", "Scaleway与AMD"]
-summary: "补录｜Anthropic 签下列比加拿大首座数据中心：新斯科舍 95MW、20 年租约"
+summary: "10 月 16 日 EverWind Fuels 宣布，Anthropic 就其位于新斯科舍 Cape Breton 的 Point Tupper 基地一处 18,600 平方米的数据中心签下…"
 weight: 992
 params:
   kind: entry
@@ -19,8 +19,6 @@ params:
     - { title: "CTV News", url: "https://www.ctvnews.ca/atlantic/nova-scotia/article/everwind-says-10b-ai-data-centre-proposal-largest-private-investment-in-ns-history/" }
     - { title: "The Logic", url: "https://thelogic.co/news/anthropic-data-centre-cape-breton-nova-scotia-everwind/" }
 ---
-
-> 一句话要点：补录｜Anthropic 签下列比加拿大首座数据中心：新斯科舍 95MW、20 年租约
 
 ## 发生了什么
 

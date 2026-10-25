@@ -5,7 +5,7 @@ slug: 2026-10-16-e01-anthropic-claude-opus-fast-mode
 tags: ["AI coding"]
 categories: []
 entities: ["Anthropic", "OpenAI"]
-summary: "Claude Platform 发布说明 10 月 15 日：Opus 5.5 的 Fast mode 正式脱离 research preview，不再需要申请访问，并成为默认档位之一。该模式最高可达 2.5x 响应速度，定价 $8 输入/$40 输出每百万 token（标准 O"
+summary: "Claude Platform 发布说明 10 月 15 日：Opus 5.5 的 Fast mode 正式脱离 research preview，不再需要申请访问，并成为默认档位之一。"
 weight: 999
 params:
   kind: entry

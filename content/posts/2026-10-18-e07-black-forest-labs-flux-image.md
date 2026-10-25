@@ -5,7 +5,7 @@ slug: 2026-10-18-e07-black-forest-labs-flux-image
 tags: ["AI Multimedia"]
 categories: ["开源"]
 entities: ["BlackForestLabs", "阿里与Qwen"]
-summary: "补录｜【补录 10-15】Black Forest Labs 开源 FLUX 3 Image Klein：5.6B、8GB 显存可跑"
+summary: "BFL 10 月 15 日发布 FLUX 3 Image Klein（10-16 被 VentureBeat、The Decoder 等报道）：5.6B 参数的开放权重图像模型，覆盖文生图、图…"
 weight: 993
 params:
   kind: entry
@@ -18,8 +18,6 @@ params:
     - { title: "VentureBeat", url: "https://venturebeat.com/technology/black-forest-labs-opens-flux-3-image-klein-weights-with-free-commercial-use-limited-to-smaller-businesses" }
     - { title: "The Decoder", url: "https://the-decoder.com/black-forest-labs-open-weights-image-model-flux-3-image-klein-runs-on-consumer-gpus-with-just-8-gb-of-vram/" }
 ---
-
-> 一句话要点：补录｜【补录 10-15】Black Forest Labs 开源 FLUX 3 Image Klein：5.6B、8GB 显存可跑
 
 ## 发生了什么
 

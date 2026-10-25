@@ -1,11 +1,17 @@
 {{- define "main" }}
 {{- $entries := where site.RegularPages "Params.kind" "entry" -}}
 {{- $editions := sort (where site.RegularPages "Params.kind" "edition") "Date" "desc" -}}
-<header class="page-header">
+<header class="r-page-head">
+  <p class="r-kicker"><span class="r-dot" aria-hidden="true"></span>Library · 全量条目</p>
   <h1>{{ .Title }}</h1>
   {{- with .Description }}
-  <div class="post-description">{{ . }}</div>
+  <p class="r-page-head__desc">{{ . }}</p>
   {{- end }}
+  <p class="r-page-head__meta">
+    <span><b>{{ len $entries }}</b> 条动态</span>
+    <span><b>{{ len $editions }}</b> 期日报</span>
+    <span><b>{{ len site.Taxonomies.entities }}</b> 类主体</span>
+  </p>
 </header>
 
 <div class="filters" id="filters">
@@ -71,6 +77,7 @@
   {{- range sort $entries "Date" "desc" }}
   {{- $ed := site.GetPage (printf "/editions/%s" .Params.edition) }}
   <li class="lib__item"
+      data-accent="{{ with .Params.tags }}{{ lower (index . 0) }}{{ end }}"
       data-dir="{{ with .Params.tags }}{{ delimit . "|" }}{{ end }}"
       data-cat="{{ with .Params.categories }}{{ delimit . "|" }}{{ end }}"
       data-ent="{{ with .Params.entities }}{{ delimit . "|" }}{{ end }}"
@@ -85,7 +92,7 @@
       {{- range .GetTerms "tags" }}<a class="badge badge--dir" href="{{ .RelPermalink }}">{{ .Title }}</a>{{- end }}
       {{- range .GetTerms "entities" }}<a class="badge badge--ent" href="{{ .RelPermalink }}">{{ .Title }}</a>{{- end }}
       {{- range .Params.flags }}<span class="badge badge--flag">{{ . }}</span>{{- end }}
-      <span class="lib__src">{{ len .Params.sources }} 个来源</span>
+      {{- with .Params.sources }}<span class="lib__src">{{ len . }} 个来源</span>{{ end }}
       {{- with $ed }}<span class="lib__ed">收录于 <a href="{{ .RelPermalink }}">{{ .Params.edition }}</a></span>{{- end }}
     </div>
     <p class="lib__brief">{{ truncate 150 .Plain }}</p>

@@ -5,7 +5,7 @@ slug: 2026-10-12-e04-agentgarten-agent-hf-papers
 tags: ["Agent"]
 categories: ["兼世界模型"]
 entities: ["xAI与Grok", "开源生态与研究"]
-summary: "论文《AgentGarten: Code Worlds for Evolving Agents》（arXiv 2610.12374）登上 Hugging Face Papers 近期热榜。框架把模拟器/游戏引擎与「共享实时神经渲染器」耦合，让多个 Agent 在持久、可交互的代码"
+summary: "论文《AgentGarten: Code Worlds for Evolving Agents》（arXiv 2610.12374）登上 Hugging Face Papers 近期热榜。"
 weight: 996
 params:
   kind: entry

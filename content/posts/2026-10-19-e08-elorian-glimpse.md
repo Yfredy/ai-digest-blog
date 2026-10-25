@@ -5,7 +5,7 @@ slug: 2026-10-19-e08-elorian-glimpse
 tags: ["AI Multimedia"]
 categories: ["视觉推理"]
 entities: ["Elorian", "OpenAI", "VAST"]
-summary: "补录｜【补录 10-16】Elorian 发布 Glimpse：用「裁剪—回看—再核验」回路对图像本身推理"
+summary: "Palo Alto 初创 Elorian（CEO Andrew M. Dai）于 10 月 16 日以研究预览形式发布首个模型 Glimpse：不满足于把图像 tokenize 进上下文，而是…"
 weight: 992
 params:
   kind: entry
@@ -18,8 +18,6 @@ params:
     - { title: "TechCrunch", url: "https://techcrunch.com/2026/10/16/elorian-glimpse-vision-reasoning/" }
     - { title: "OpenRouter 模型页", url: "https://openrouter.ai/" }
 ---
-
-> 一句话要点：补录｜【补录 10-16】Elorian 发布 Glimpse：用「裁剪—回看—再核验」回路对图像本身推理
 
 ## 发生了什么
 

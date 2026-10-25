@@ -1,4 +1,6 @@
-baseURL: "https://yfredy.github.io/ai-digest-blog/"
+# 根相对，产物与托管域名无关；GitHub Pages 子路径部署请在仓库变量 HUGO_BASE_URL 里填你自己的地址，
+# 不要写进本文件（仓库里不留个人账号标识）。
+baseURL: "/"
 languageCode: "zh-CN"
 defaultContentLanguage: "zh"
 hasCJKLanguage: true
@@ -58,7 +60,6 @@ menus:
 params:
   description: "每日 AI 领域重要动态的结构化速递：发生了什么 / 为什么值得关注 / 方向 / 来源，逐条独立成页可检索。"
   keywords: [AI, 人工智能, Agent, AI coding, AIOS, AI Audio, AI Multimedia, 开源权重, 算力, 每日动态]
-  author: "姚越"
   DateFormat: "2006-01-02"
   mainSections: ["posts", "editions"]
   defaultTheme: "auto"

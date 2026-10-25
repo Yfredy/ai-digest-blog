@@ -1,0 +1,29 @@
+{{- define "main" }}
+{{- $eds := sort (where site.RegularPages "Params.kind" "edition") "Params.edition" "desc" -}}
+{{- $entries := where site.RegularPages "Params.kind" "entry" -}}
+{{- $palette := slice "ai coding" "agent" "aios" "ai audio" "ai multimedia" "泛ai" -}}
+<header class="r-page-head">
+  <p class="r-kicker"><span class="r-dot" aria-hidden="true"></span>Daily · 全部期次</p>
+  <h1>{{ .Title }}</h1>
+  {{- with .Content }}<div class="r-page-head__desc">{{ . }}</div>
+  {{- else }}{{ with .Description }}<p class="r-page-head__desc">{{ . }}</p>{{ end }}{{ end }}
+  <p class="r-page-head__meta">
+    <span><b>{{ len $eds }}</b> 期</span>
+    <span><b>{{ len $entries }}</b> 条收录</span>
+    <a href="{{ "index.xml" | relURL }}">RSS 订阅 →</a>
+  </p>
+</header>
+
+<ul class="r-edgrid">
+  {{- range $i, $e := $eds }}
+  <li>
+    <a class="r-expand" href="{{ $e.RelPermalink }}" data-accent="{{ index $palette (mod $i (len $palette)) }}">
+      <span class="r-expand__date">{{ $e.Params.edition }}</span>
+      <span class="r-expand__count">{{ $e.Params.entryCount | default 0 }} 条</span>
+      {{- with $e.Params.window }}<span class="r-expand__win">{{ . | truncate 120 }}</span>{{ end }}
+      <span class="r-expand__go">阅读本期 →</span>
+    </a>
+  </li>
+  {{- end }}
+</ul>
+{{- end }}{{- /* end main */ -}}

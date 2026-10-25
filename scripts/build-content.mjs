@@ -133,6 +133,21 @@ function yamlQuote(s) {
   return JSON.stringify(String(s).replace(/\u3000/g, " ").trim());
 }
 
+// \u5217\u8868\u4e0e\u641c\u7d22\u7528\u7684\u6458\u8981\uff1a\u53d6\u300c\u53d1\u751f\u4e86\u4ec0\u4e48\u300d\u7684\u5f00\u5934\u5e76\u6309\u53e5\u8bfb\u6536\u5c3e\uff0c\u4e0d\u62ff\u6807\u9898\u91cd\u590d\u4e00\u904d
+function leadOf(src, limit = 96) {
+  const clean = String(src || "")
+    .replace(/\*\*/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+  if (!clean) return "";
+  if (clean.length <= limit) return clean;
+  const head = clean.slice(0, limit);
+  const stops = [...head.matchAll(/[\u3002\uff01\uff1f\uff1b;]/g)];
+  const last = stops[stops.length - 1];
+  if (last && last.index >= Math.floor(limit * 0.5)) return head.slice(0, last.index + 1);
+  return head.replace(/[,\uff0c\u3001:\uff1a\s]+$/, "") + "\u2026";
+}
+
 function frontMatter(p) {
   const lines = [
     "---",
@@ -142,7 +157,7 @@ function frontMatter(p) {
     `tags: [${p.tags.map(yamlQuote).join(", ")}]`,
     `categories: [${p.subs.map(yamlQuote).join(", ")}]`,
     `entities: [${p.entities.map(yamlQuote).join(", ")}]`,
-    "summary: " + yamlQuote(p.takeaway || p.happened.slice(0, 140)),
+    "summary: " + yamlQuote(leadOf(p.happened)),
     "weight: " + p.weight,
     "params:",
     "  kind: entry",
@@ -160,7 +175,6 @@ function frontMatter(p) {
 
 function entryBody(p) {
   const parts = [];
-  if (p.takeaway) parts.push(`> 一句话要点：${p.takeaway}\n`);
   parts.push(`## 发生了什么\n\n${p.happened}\n`);
   if (p.why) parts.push(`## 为什么值得关注\n\n${p.why}\n`);
   if (p.sources.length) {
@@ -272,7 +286,6 @@ function build() {
         title,
         happened,
         why,
-        takeaway: flags.length ? `${flags.join("/")}｜${title}` : "",
         tags: [...dirs.tags],
         directions: dirs.tags.map((label) => DIRECTIONS.find((d) => d.label === label) || { label }),
         subs: dirs.subs,
@@ -311,7 +324,7 @@ function build() {
         `  entryCount: ${entryCount}`,
         `  window: ${yamlQuote(windowLine)}`,
         "  directionNotes:",
-        ...takeaways.map((t) => `    - { dir: ${yamlQuote(t.dir)}, text: ${yamlQuote(t.text)} }`),
+        ...takeaways.map((t) => `    - { dir: ${yamlQuote(t.dir)}, text: ${yamlQuote(t.text)}, short: ${yamlQuote(leadOf(t.text, 80))} }`),
         "---",
         "",
         "本页面是当日完整成稿。逐条独立页面见「动态库」，每条页面可用「收录于」反查本期。",

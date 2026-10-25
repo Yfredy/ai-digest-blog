@@ -5,7 +5,7 @@ slug: 2026-10-17-e02-kling-bit-hdr
 tags: ["AI Multimedia"]
 categories: []
 entities: ["快手可灵", "Google与Gemini"]
-summary: "可灵 AI 于 10 月 15 日深夜全量上线新一代视频模型 Kling 4.0，并于 10 月 16 日宣布面向全球开放。单次原生生成最长 30 秒（支持长镜头与连续叙事），文本提示输入长度提升至最高 8000 token，输出支持 4K 与 1080p 的 10-bit HD"
+summary: "可灵 AI 于 10 月 15 日深夜全量上线新一代视频模型 Kling 4.0，并于 10 月 16 日宣布面向全球开放。"
 weight: 998
 params:
   kind: entry

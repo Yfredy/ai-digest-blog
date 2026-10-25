@@ -5,7 +5,7 @@ slug: 2026-10-19-e11-fish-audio-drama-tts
 tags: ["AI Audio"]
 categories: ["开源权重"]
 entities: ["FishAudio", "开源生态与研究"]
-summary: "补录/纠正｜【补录并纠正 10-13～14】Fish Audio Drama 3：35B 开源权重表演型 TTS"
+summary: "Fish Audio 于 10 月 13 日发布 Drama 3 的产品与 API、10 月 14 日开源 35B 权重（fishaudio/drama-3，稀疏 MoE TTS），主打「可导…"
 weight: 989
 params:
   kind: entry
@@ -19,8 +19,6 @@ params:
     - { title: "arXiv 技术报告", url: "https://arxiv.org/abs/2610.18010" }
     - { title: "Artificial Analysis 榜单", url: "https://artificialanalysis.ai/" }
 ---
-
-> 一句话要点：补录/纠正｜【补录并纠正 10-13～14】Fish Audio Drama 3：35B 开源权重表演型 TTS
 
 ## 发生了什么
 

@@ -5,7 +5,7 @@ slug: 2026-10-17-e01-meta-muse-spark-open
 tags: ["AI coding", "泛AI"]
 categories: ["开源权重"]
 entities: ["Meta", "NVIDIA", "Scaleway与AMD", "开源生态与研究"]
-summary: "10 月 16 日 Meta（MSL）在 Hugging Face 以 Muse Model License 发布 Muse Spark Open 权重，总参数 816B、每 token 激活 42B，上下文 1M token，与商业版 Muse Spark 1.3 共享同一基座"
+summary: "10 月 16 日 Meta（MSL）在 Hugging Face 以 Muse Model License 发布 Muse Spark Open 权重，总参数 816B、每 token 激活…"
 weight: 999
 params:
   kind: entry

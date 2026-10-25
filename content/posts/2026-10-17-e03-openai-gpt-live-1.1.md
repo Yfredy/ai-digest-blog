@@ -5,7 +5,7 @@ slug: 2026-10-17-e03-openai-gpt-live-1.1
 tags: ["AI Audio"]
 categories: []
 entities: ["OpenAI", "xAI与Grok"]
-summary: "OpenAI 于 10 月 15 日开始灰度、16 日官宣 GPT-Live-1.1（含 Quip 变体），为 ChatGPT Voice、Codex 与 dots 三处同时换上新的实时语音栈。本次带来 13 个新音色、覆盖七种语言（法语、德语、印地语、日语、韩语、墨西哥西语等）"
+summary: "OpenAI 于 10 月 15 日开始灰度、16 日官宣 GPT-Live-1.1（含 Quip 变体），为 ChatGPT Voice、Codex 与 dots 三处同时换上新的实时语音栈…"
 weight: 997
 params:
   kind: entry

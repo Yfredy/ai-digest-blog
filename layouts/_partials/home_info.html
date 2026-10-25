@@ -1,66 +1,145 @@
 {{- $entries := where site.RegularPages "Params.kind" "entry" -}}
-{{- $editions := where site.RegularPages "Params.kind" "edition" -}}
-{{- $latestEntries := first 6 (sort $entries "Date" "desc") -}}
+{{- $editions := sort (where site.RegularPages "Params.kind" "edition") "Date" "desc" -}}
 {{- $dirs := hugo.Data.directions -}}
 {{- $dirTerms := slice -}}
+{{- $maxCount := 0 -}}
 {{- range site.Taxonomies.tags.ByCount -}}
-{{- if isset $dirs .Page.Data.Term -}}
-{{- $dirTerms = $dirTerms | append .Page.Data.Term -}}
+  {{- if isset $dirs .Page.Data.Term -}}
+    {{- $dirTerms = $dirTerms | append (dict "term" .Page.Data.Term "count" .Count "page" .Page) -}}
+    {{- if gt .Count $maxCount }}{{ $maxCount = .Count }}{{ end -}}
+  {{- end -}}
 {{- end -}}
-{{- end -}}
-<section class="hero-card">
-  <div class="hero-card__text">
-    <h1 class="hero-card__title">{{ site.Title }}</h1>
-    <p class="hero-card__lead">{{ site.Params.description }}</p>
-    <div class="hero-card__stats">
-      <span class="stat"><b>{{ len $entries }}</b> 条动态</span>
-      <span class="stat"><b>{{ len $editions }}</b> 期日报</span>
-      <span class="stat"><b>{{ len $dirTerms }}</b> 个方向</span>
-      <span class="stat"><b>{{ len site.Taxonomies.entities }}</b> 类主体</span>
-    </div>
-    <div class="hero-card__cta">
-      <a class="btn btn--primary" href="{{ "library/" | relURL }}">进入动态库</a>
-      {{- range first 1 (sort $editions "Date" "desc") -}}
-      <a class="btn" href="{{ .RelPermalink }}">最新一期 · {{ .Params.edition }}</a>
-      {{- end -}}
-      <a class="btn" href="{{ "about/" | relURL }}">选题口径</a>
+{{- $title := site.Title -}}
+{{- $accent := "速递" -}}
+{{- $head := site.Title -}}
+{{- if strings.HasSuffix $title $accent }}{{ $head = strings.TrimSuffix $accent $title }}{{ end -}}
+
+<section class="r-hero">
+  <div class="r-hero__body">
+    <p class="r-kicker"><span class="r-dot" aria-hidden="true"></span>每日核实 · Asia/Shanghai 09:00 窗口</p>
+    <h1 class="r-hero__title">{{ $head }}{{ if ne $head $title }}<em>{{ $accent }}</em>{{ end }}</h1>
+    <p class="r-hero__lead">{{ site.Params.description }}</p>
+    <ul class="r-stats">
+      <li><b>{{ len $entries }}</b><span>条动态</span></li>
+      <li><b>{{ len $editions }}</b><span>期日报</span></li>
+      <li><b>{{ len $dirTerms }}</b><span>个方向</span></li>
+      <li><b>{{ len site.Taxonomies.entities }}</b><span>类主体</span></li>
+    </ul>
+    <div class="r-actions">
+      <a class="r-btn r-btn--solid" href="{{ "library/" | relURL }}">进入动态库
+        <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      {{- with $editions }}{{ with (index . 0) }}
+      <a class="r-btn r-btn--ghost" href="{{ .RelPermalink }}">最新一期 · {{ .Params.edition }}</a>
+      {{- end }}{{ end -}}
+      <a class="r-link" href="{{ "about/" | relURL }}">选题口径</a>
+      {{- with .OutputFormats.Get "rss" }}<a class="r-link" href="{{ .RelPermalink }}">RSS</a>{{ end -}}
     </div>
   </div>
-</section>
-
-<section class="dir-nav">
-  <h2 class="section-title">按方向进入</h2>
-  <div class="dir-nav__grid">
-    {{- range site.Taxonomies.tags.ByCount -}}
-    {{- $page := .Page -}}
-    {{- $term := .Page.Data.Term -}}
-    {{- $count := .Count -}}
-    {{- with index $dirs $term -}}
-    <a class="dir-card" href="{{ $page.RelPermalink }}">
-      <span class="dir-card__name">{{ $term }}</span>
-      <span class="dir-card__count">{{ $count }} 条</span>
-      <span class="dir-card__desc">{{ . }}</span>
-    </a>
-    {{- end -}}
-    {{- end -}}
+  {{- with resources.Get "images/hero-signal-lattice.png" }}
+  {{- $lg := .Resize "1200x webp q82" -}}
+  {{- $sm := .Resize "720x webp q78" -}}
+  <div class="r-hero__visual">
+    <img src="{{ $lg.RelPermalink }}"
+         srcset="{{ $sm.RelPermalink }} {{ $sm.Width }}w, {{ $lg.RelPermalink }} {{ $lg.Width }}w"
+         sizes="(max-width: 900px) 100vw, 50vw"
+         width="{{ $lg.Width }}" height="{{ $lg.Height }}"
+         alt="" fetchpriority="high" decoding="async">
   </div>
+  {{- end }}
 </section>
 
-<section class="latest">
-  <h2 class="section-title">最近条目</h2>
-  <ul class="entry-list">
-    {{- range $latestEntries -}}
-    {{- $ed := site.GetPage (printf "/editions/%s" .Params.edition) -}}
-    <li class="entry-item">
-      <a class="entry-item__title" href="{{ .RelPermalink }}">{{ .Title }}</a>
-      <div class="entry-item__meta">
-        <span class="badge badge--date">{{ .Params.eventDate }}</span>
-        {{- range .GetTerms "tags" -}}<a class="badge badge--dir" href="{{ .RelPermalink }}">{{ .Title }}</a>{{- end -}}
-        {{- range .Params.flags -}}<span class="badge badge--flag">{{ . }}</span>{{- end -}}
-        {{- with $ed -}}<span class="entry-item__edition">收录于 <a href="{{ .RelPermalink }}">{{ .Params.edition }} 日报</a></span>{{- end -}}
+{{- with $editions }}{{ with (index . 0) -}}
+{{- $edCount := len (where $entries "Params.edition" .Params.edition) -}}
+<section>
+  <header class="r-head">
+    <h2 class="r-title"><span class="r-idx">01</span>最新一期速览</h2>
+    <a class="r-more" href="{{ .RelPermalink }}">完整日报 {{ $edCount }} 条 →</a>
+  </header>
+  <div class="r-brief">
+    <div class="r-brief__meta">
+      <span class="badge badge--date">{{ .Params.edition }}</span>
+      {{- with .Params.window }}<span class="r-brief__window">{{ . }}</span>{{ end -}}
+    </div>
+    {{- with .Params.directionNotes }}
+    <dl class="r-brief__grid">
+      {{- range . }}
+      <div class="r-brief__row" data-dir="{{ lower .dir }}">
+        <dt>{{ .dir }}</dt>
+        <dd>{{ .short | default .text }}</dd>
       </div>
+      {{- end }}
+    </dl>
+    {{- end }}
+  </div>
+</section>
+{{- end }}{{ end -}}
+
+<section>
+  <header class="r-head">
+    <h2 class="r-title"><span class="r-idx">02</span>按方向进入</h2>
+    <span class="r-more">{{ len $dirTerms }} 个方向</span>
+  </header>
+  <div class="r-dirs">
+    {{- range $dirTerms }}
+    <a class="r-dir" data-dir="{{ lower .term }}" href="{{ .page.RelPermalink }}">
+      <span class="r-dir__name">{{ .term }}</span>
+      <span class="r-dir__count">{{ .count }}</span>
+      <span class="r-dir__bar" aria-hidden="true" style="--w:{{ .count }};--max:{{ $maxCount }}"><i></i></span>
+      <span class="r-dir__desc">{{ index $dirs .term }}</span>
+      <span class="r-dir__go">查看该方向 →</span>
+    </a>
+    {{- end }}
+  </div>
+</section>
+
+{{- $latestEntries := first 8 (sort $entries "Date" "desc") -}}
+<section>
+  <header class="r-head">
+    <h2 class="r-title"><span class="r-idx">03</span>最近条目</h2>
+    <a class="r-more" href="{{ "library/" | relURL }}">全部 {{ len $entries }} 条 →</a>
+  </header>
+  <ul class="r-list">
+    {{- range $latestEntries -}}
+    {{- $srcCount := 0 -}}
+    {{- with .Params.sources }}{{ $srcCount = len . }}{{ end -}}
+    <li class="r-row" data-accent="{{ with .Params.tags }}{{ lower (index . 0) }}{{ end }}">
+      <span class="r-row__date">{{ .Params.eventDate }}</span>
+      <span class="r-row__main">
+        <a class="r-row__title" href="{{ .RelPermalink }}">{{ .Title }}</a>
+        <span class="r-row__meta">
+          {{- range .GetTerms "tags" -}}<a class="badge badge--dir" href="{{ .RelPermalink }}">{{ .Title }}</a>{{ end -}}
+          {{- range .Params.flags -}}<span class="badge badge--flag">{{ . }}</span>{{ end -}}
+          <span class="r-row__src">{{ .Params.edition }} · {{ $srcCount }} 个来源</span>
+        </span>
+      </span>
+      <span class="r-row__arrow" aria-hidden="true">→</span>
     </li>
     {{- end -}}
   </ul>
-  <p class="latest__more"><a href="{{ "library/" | relURL }}">全部 {{ len $entries }} 条 →</a></p>
 </section>
+
+{{- if gt (len $editions) 1 -}}
+<section class="r-band">
+  <div>
+    <header class="r-head r-head--onDark">
+      <h2 class="r-title"><span class="r-idx">04</span>往日日报</h2>
+      <a class="r-more" href="{{ "editions/" | relURL }}">全部 {{ len $editions }} 期 →</a>
+    </header>
+    <div class="r-editions">
+      {{- range first 8 (after 0 $editions) -}}
+      <a class="r-ed" href="{{ .RelPermalink }}">
+        <b>{{ .Params.edition }}</b>
+        <i>{{ len (where $entries "Params.edition" .Params.edition) }} 条</i>
+      </a>
+      {{- end }}
+    </div>
+  </div>
+  {{- with resources.Get "images/edition-stack.png" }}
+  {{- $fig := .Resize "680x webp q82" -}}
+  <figure class="r-band__fig">
+    <img src="{{ $fig.RelPermalink }}" width="{{ $fig.Width }}" height="{{ $fig.Height }}" decoding="async" alt="">
+  </figure>
+  {{- end }}
+</section>
+{{- end -}}

@@ -5,7 +5,7 @@ slug: 2026-10-19-e10-tether-capital-aisa-agent
 tags: ["Agent"]
 categories: ["基础设施", "支付"]
 entities: ["Tether与AIsa", "OpenAI", "xAI与Grok", "Perplexity"]
-summary: "补录｜【补录 10-15，10-18 传播】Tether Capital 战略投资 AIsa：为 Agent 铺稳定币支付轨"
+summary: "Tether Capital 于 10 月 15 日宣布对 AIsa 进行战略投资（seed extension 轮，AIsa 累计融资超 900 万美元，另有 HIVEN 参投），消息在 1…"
 weight: 990
 params:
   kind: entry
@@ -18,8 +18,6 @@ params:
     - { title: "Tether 新闻", url: "https://tether.io/news/" }
     - { title: "crypto.news", url: "https://crypto.news/" }
 ---
-
-> 一句话要点：补录｜【补录 10-15，10-18 传播】Tether Capital 战略投资 AIsa：为 Agent 铺稳定币支付轨
 
 ## 发生了什么
 

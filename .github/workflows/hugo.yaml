@@ -46,7 +46,16 @@ jobs:
           extended: true
 
       - name: 构建站点
-        run: hugo --gc --minify --baseURL "${{ vars.HUGO_BASE_URL || 'https://yfredy.github.io/ai-digest-blog/' }}"
+        # 仓库变量 HUGO_BASE_URL 必须填写，例如 https://<user>.github.io/<repo>/
+        # hugo.yaml 里留的是 "/"（Qoder Sites 产物契约），拿它构建 Pages 子路径会导致全站链接失效
+        env:
+          HUGO_BASE_URL: ${{ vars.HUGO_BASE_URL }}
+        run: |
+          if [ -z "$HUGO_BASE_URL" ]; then
+            echo "::error::未设置仓库变量 HUGO_BASE_URL：Settings → Secrets and variables → Actions → Variables"
+            exit 1
+          fi
+          hugo --gc --minify --baseURL "$HUGO_BASE_URL"
 
       - name: 检查产物
         run: |
@@ -58,6 +67,13 @@ jobs:
           test -f public/entities/index.html
           test -f public/index.json
           echo "产物页面数：$(find public -name index.html | wc -l)"
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: 隐私门禁（公开产物不得含个人信息）
+        run: node scripts/verify-privacy.mjs public
 
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3

@@ -5,7 +5,7 @@ slug: 2026-10-10-e02-windows-mai-code-flash-agent
 tags: ["AI coding", "AIOS"]
 categories: []
 entities: ["微软与GitHub", "NVIDIA", "Apple"]
-summary: "微软 10 月 7 日 Windows/Surface 发布会后，10 月 8-9 日多家媒体与官方博文持续放出细节：微软 AI 开发了本地版 MAI Code 1.1 Flash——面向编码优化的 MoE 模型，总参数 137B、激活约 6.8B，可在 Surface/NVID"
+summary: "微软 10 月 7 日 Windows/Surface 发布会后，10 月 8-9 日多家媒体与官方博文持续放出细节：微软 AI 开发了本地版 MAI Code 1.1 Flash——面向编码…"
 weight: 998
 params:
   kind: entry

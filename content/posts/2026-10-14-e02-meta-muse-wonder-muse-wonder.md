@@ -5,7 +5,7 @@ slug: 2026-10-14-e02-meta-muse-wonder-muse-wonder
 tags: ["Agent", "泛AI"]
 categories: ["模型发布"]
 entities: ["Meta", "OpenAI", "Anthropic", "xAI与Grok"]
-summary: "Meta 10 月 12 日发布自称迄今最强的 Muse Wonder 与 Muse Wonder Full 双推理模型，编码成绩显著高于此前的轻量版 Muse Spark；核心卖点是 Active Memory（跨会话长期记忆调用）与 Active Focus（长任务抗遗忘聚焦"
+summary: "Meta 10 月 12 日发布自称迄今最强的 Muse Wonder 与 Muse Wonder Full 双推理模型，编码成绩显著高于此前的轻量版 Muse Spark；"
 weight: 998
 params:
   kind: entry

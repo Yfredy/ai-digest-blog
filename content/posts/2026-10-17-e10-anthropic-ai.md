@@ -5,7 +5,7 @@ slug: 2026-10-17-e10-anthropic-ai
 tags: ["泛AI"]
 categories: ["政策", "治理"]
 entities: ["Anthropic", "微软与GitHub", "监管与政府机构"]
-summary: "Politico 10 月 16 日报道，Anthropic 已向国会议员提交一份自提的 AI 安全法案草案：一方面限制政府在何种情形下可以叫停一个前沿模型的发布，另一方面 preempt（优先适用联邦法）部分州级 AI 法律，涉及风险信息公开、第三方评估与相关报告义务。这与 A"
+summary: "Politico 10 月 16 日报道，Anthropic 已向国会议员提交一份自提的 AI 安全法案草案：一方面限制政府在何种情形下可以叫停一个前沿模型的发布，另一方面 preempt（优…"
 weight: 990
 params:
   kind: entry

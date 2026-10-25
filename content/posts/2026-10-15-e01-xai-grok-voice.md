@@ -5,7 +5,7 @@ slug: 2026-10-15-e01-xai-grok-voice
 tags: ["AI Audio"]
 categories: []
 entities: ["xAI与Grok", "OpenAI", "Google与Gemini"]
-summary: "xAI 10 月 14 日通过 Voice Agent API 发布 Grok Voice 3.0，自称「全球最智能的 speech-to-speech 模型」：在 Artificial Analysis 语音对语音指数以 86.9 分排名第一（超越 OpenAI 与 Googl"
+summary: "xAI 10 月 14 日通过 Voice Agent API 发布 Grok Voice 3.0，自称「全球最智能的 speech-to-speech 模型」：在 Artificial An…"
 weight: 999
 params:
   kind: entry

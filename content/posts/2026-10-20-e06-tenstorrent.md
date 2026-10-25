@@ -5,7 +5,7 @@ slug: 2026-10-20-e06-tenstorrent
 tags: ["泛AI"]
 categories: ["芯片", "算力", "融资"]
 entities: ["Tenstorrent", "NVIDIA", "字节与联发科", "Scaleway与AMD"]
-summary: "Jim Keller 领导的 AI 芯片初创 Tenstorrent 于 10 月 19 日宣布完成 15 亿美元 E 轮融资，投后估值 62 亿美元（较 2024 年翻倍有余），由 Trace Capital 与创新基金类机构（Innovation X）等领投（彭博率先报道）。"
+summary: "Jim Keller 领导的 AI 芯片初创 Tenstorrent 于 10 月 19 日宣布完成 15 亿美元 E 轮融资，投后估值 62 亿美元（较 2024 年翻倍有余），由 Trac…"
 weight: 994
 params:
   kind: entry

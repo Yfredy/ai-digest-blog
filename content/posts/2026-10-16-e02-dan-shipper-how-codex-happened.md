@@ -5,7 +5,7 @@ slug: 2026-10-16-e02-dan-shipper-how-codex-happened
 tags: ["AI coding"]
 categories: []
 entities: ["OpenAI", "Anthropic"]
-summary: "Every 主编 Dan Shipper 10 月 15 日发布对 OpenAI Codex 的一手复盘长文：披露 Codex 到 2026 年 6 月已达 500 万周活跃用户，并于 7 月 9 日正式并入 ChatGPT 成为其编程层；文章复盘了 Codex 从早期失败发布到"
+summary: "Every 主编 Dan Shipper 10 月 15 日发布对 OpenAI Codex 的一手复盘长文：披露 Codex 到 2026 年 6 月已达 500 万周活跃用户，并于 7 月…"
 weight: 998
 params:
   kind: entry

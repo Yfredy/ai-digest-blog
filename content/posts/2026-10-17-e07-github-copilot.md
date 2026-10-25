@@ -5,7 +5,7 @@ slug: 2026-10-17-e07-github-copilot
 tags: ["AI coding"]
 categories: []
 entities: ["微软与GitHub", "OpenAI", "Anthropic"]
-summary: "补录｜【补录 10-15】GitHub Copilot 三款模型 11 月 16 日退役"
+summary: "同一份 10 月 15 日 changelog 宣布，11 月 16 日将在 Copilot 全部体验（内联编辑、ask/agent 模式、代码补全）中下线 Claude Opus 4.8、C…"
 weight: 993
 params:
   kind: entry
@@ -16,8 +16,6 @@ params:
   sources:
     - { title: "GitHub Changelog", url: "https://github.blog/changelog/2026-10-15-upcoming-deprecation-of-selected-github-copilot-models-in-mid-november/" }
 ---
-
-> 一句话要点：补录｜【补录 10-15】GitHub Copilot 三款模型 11 月 16 日退役
 
 ## 发生了什么
 

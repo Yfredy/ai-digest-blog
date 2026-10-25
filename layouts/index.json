@@ -1,0 +1,8 @@
+{{- /* 覆盖主题的 index.json：用 RelPermalink 输出根相对路径，这样同一份产物换域名（本地预览 / Sites 托管）都不用重新构建 */ -}}
+{{- $index := slice -}}
+{{- range site.RegularPages -}}
+    {{- if and (not .Params.searchHidden) (ne .Layout `archives`) (ne .Layout `search`) }}
+    {{- $index = $index | append (dict "title" .Title "content" .Plain "permalink" .RelPermalink "summary" .Summary) -}}
+    {{- end }}
+{{- end -}}
+{{- $index | jsonify -}}

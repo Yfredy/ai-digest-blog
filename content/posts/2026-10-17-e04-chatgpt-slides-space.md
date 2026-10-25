@@ -5,7 +5,7 @@ slug: 2026-10-17-e04-chatgpt-slides-space
 tags: ["Agent", "AI Multimedia"]
 categories: ["办公"]
 entities: ["OpenAI", "Perplexity", "Anthropic", "xAI与Grok"]
-summary: "ChatGPT 发布说明 10 月 16 日条目新增「Create and collaborate on slides in ChatGPT」——ChatGPT Slides 支持直接生成演示文稿，并在 Space 内与团队持续协作编辑。此前同类能力上，xAI 的 Grok Bo"
+summary: "ChatGPT 发布说明 10 月 16 日条目新增「Create and collaborate on slides in ChatGPT」——ChatGPT Slides 支持直接生成演示…"
 weight: 996
 params:
   kind: entry

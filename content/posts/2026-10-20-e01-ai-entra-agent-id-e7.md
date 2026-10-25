@@ -5,7 +5,7 @@ slug: 2026-10-20-e01-ai-entra-agent-id-e7
 tags: ["Agent", "AIOS"]
 categories: ["治理", "身份", "Agent运行时"]
 entities: ["微软与GitHub", "OpenAI", "腾讯", "ServiceNow"]
-summary: "微软 10 月 19 日同日发布《Securing the agentic insider》（官方博客）与《Agents are your newest insiders. Security must move at their speed.》（安全博客），宣布扩展 Micros"
+summary: "微软 10 月 19 日同日发布《Securing the agentic insider》（官方博客）与《Agents are your newest insiders. Security…"
 weight: 999
 params:
   kind: entry

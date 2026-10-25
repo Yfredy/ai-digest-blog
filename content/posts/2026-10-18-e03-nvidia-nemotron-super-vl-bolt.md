@@ -5,7 +5,7 @@ slug: 2026-10-18-e03-nvidia-nemotron-super-vl-bolt
 tags: ["AIOS", "泛AI"]
 categories: ["开源权重", "端侧"]
 entities: ["NVIDIA"]
-summary: "补录｜【补录 10-15～16】NVIDIA 开源 Nemotron 3.5 双模型：Super VL 120B 与 Bolt 74B"
+summary: "NVIDIA 在 10 月 15 日发布、16 日经官方博客铺开两款开放模型：Nemotron 3.5 Super VL（120B 总参/12B 激活的视觉-语言模型，1M 上下文，面向服务器…"
 weight: 997
 params:
   kind: entry
@@ -18,8 +18,6 @@ params:
     - { title: "ZDNet", url: "https://www.zdnet.com/innovation/nvidia-nemotron-3-5-super-vl-model-us-open-weight-ai/" }
     - { title: "技术细节梳理", url: "https://cellcog.ai/blog/nemotron-3-5-super-vl-bolt/" }
 ---
-
-> 一句话要点：补录｜【补录 10-15～16】NVIDIA 开源 Nemotron 3.5 双模型：Super VL 120B 与 Bolt 74B
 
 ## 发生了什么
 

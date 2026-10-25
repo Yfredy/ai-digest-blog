@@ -5,7 +5,7 @@ slug: 2026-10-10-e04-xai-grok-bot-mail.grokbot.com
 tags: ["Agent"]
 categories: []
 entities: ["xAI与Grok"]
-summary: "10 月 9 日 xAI 为 Grok Bot（8 月 11 日上线的常驻 Agent 团队产品）增加专属邮箱地址，格式以 @mail.grokbot.com 结尾，用户可让自己的 Bot 收发邮件；此前 10 月 7 日 v0.68.1 已上线幻灯片生成与 Outlook 可编"
+summary: "10 月 9 日 xAI 为 Grok Bot（8 月 11 日上线的常驻 Agent 团队产品）增加专属邮箱地址，格式以 @mail.grokbot.com 结尾，用户可让自己的 Bot 收…"
 weight: 996
 params:
   kind: entry

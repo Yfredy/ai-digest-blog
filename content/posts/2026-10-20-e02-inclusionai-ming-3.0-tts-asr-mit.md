@@ -5,7 +5,7 @@ slug: 2026-10-20-e02-inclusionai-ming-3.0-tts-asr-mit
 tags: ["AI Audio", "泛AI"]
 categories: ["开源权重"]
 entities: ["蚂蚁inclusionAI", "阿里与Qwen", "FishAudio", "开源生态与研究"]
-summary: "蚂蚁集团 inclusionAI（Ant Ling 团队）于 10 月 19 日开源 Ming-3.0 系列五款模型，横跨三个家族：Ming-3.0-tts-0.5B（稠密，主打声音设计与副语言线索控制）、Ming-3.0-tts-tiny（7.9B 总参/1.3B 激活）、Mi"
+summary: "蚂蚁集团 inclusionAI（Ant Ling 团队）于 10 月 19 日开源 Ming-3.0 系列五款模型，横跨三个家族：Ming-3.0-tts-0.5B（稠密，主打声音设计与副语…"
 weight: 998
 params:
   kind: entry

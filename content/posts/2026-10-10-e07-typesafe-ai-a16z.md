@@ -5,7 +5,7 @@ slug: 2026-10-10-e07-typesafe-ai-a16z
 tags: ["泛AI"]
 categories: ["融资"]
 entities: ["TypeSafeAI"]
-summary: "10 月 9 日，做「machine-native / 非文本 AI 模型」的 TypeSafe AI 宣布约 8.7 亿美元融资（a16z 领投，Sequoia 等跟投），估值 75 亿美元——距其模型 Jev 上线仅数周。Jev 是一类面向自动化任务的非文本模态模型，发布后快"
+summary: "10 月 9 日，做「machine-native / 非文本 AI 模型」的 TypeSafe AI 宣布约 8.7 亿美元融资（a16z 领投，Sequoia 等跟投），估值 75 亿美元…"
 weight: 993
 params:
   kind: entry

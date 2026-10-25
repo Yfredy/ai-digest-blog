@@ -1,0 +1,33 @@
+{{- define "main" }}
+{{- $plural := .Data.Plural -}}
+{{- $label := "索引" -}}
+{{- if eq $plural "tags" }}{{ $label = "方向" }}{{ else if eq $plural "categories" }}{{ $label = "细分" }}{{ else if eq $plural "entities" }}{{ $label = "主体" }}{{ end -}}
+{{- $shown := 0 -}}
+{{- range .Data.Terms.ByCount }}{{ if ne .Page.Title "日报" }}{{ $shown = add $shown 1 }}{{ end }}{{ end -}}
+{{- $palette := slice "ai coding" "agent" "aios" "ai audio" "ai multimedia" "泛ai" -}}
+<header class="r-page-head">
+  <p class="r-kicker"><span class="r-dot" aria-hidden="true"></span>Index · {{ $label }}</p>
+  <h1>{{ .Title }}</h1>
+  {{- with .Description }}<p class="r-page-head__desc">{{ . }}</p>{{ end }}
+  <p class="r-page-head__meta">
+    <span><b>{{ $shown }}</b> 项</span>
+    <span>按收录条数排序</span>
+    <a href="{{ "library/" | relURL }}">在动态库中筛选 →</a>
+  </p>
+</header>
+
+<ul class="term-grid">
+  {{- range $i, $t := .Data.Terms.ByCount }}
+  {{- if ne $t.Page.Title "日报" }}
+  {{- $accent := cond (eq $plural "tags") (lower $t.Page.Title) (index $palette (mod $i (len $palette))) -}}
+  <li>
+    <a class="term" href="{{ $t.Page.RelPermalink }}" data-accent="{{ $accent }}">
+      <span class="term__name">{{ $t.Page.Title }}</span>
+      <span class="term__count">{{ $t.Count }}</span>
+      <span class="term__go">查看条目 →</span>
+    </a>
+  </li>
+  {{- end }}
+  {{- end }}
+</ul>
+{{- end }}{{- /* end main */ -}}

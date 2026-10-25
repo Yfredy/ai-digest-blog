@@ -5,7 +5,7 @@ slug: 2026-10-12-e01-wsj-amodei-meta-meta-anthropic
 tags: ["泛AI"]
 categories: ["算力"]
 entities: ["Anthropic", "Meta", "监管与政府机构", "Google与Gemini"]
-summary: "补录｜【补录】WSJ：Amodei 向 Meta 求算力被拒，Meta 搁置对 Anthropic 的百亿美元算力出租"
+summary: "《华尔街日报》10 月 9 日报道，Anthropic CEO Dario Amodei 今年亲自向 Meta 负责人 Alexandr Wang 接洽购买/租用算力，遭到拒绝；"
 weight: 999
 params:
   kind: entry
@@ -16,8 +16,6 @@ params:
   sources:
     - { title: "Techmeme 261009/p33", url: "https://www.techmeme.com/261009/p33" }
 ---
-
-> 一句话要点：补录｜【补录】WSJ：Amodei 向 Meta 求算力被拒，Meta 搁置对 Anthropic 的百亿美元算力出租
 
 ## 发生了什么
 

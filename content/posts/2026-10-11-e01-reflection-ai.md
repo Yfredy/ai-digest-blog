@@ -5,7 +5,7 @@ slug: 2026-10-11-e01-reflection-ai
 tags: ["泛AI"]
 categories: ["并购", "算力", "开源"]
 entities: ["NVIDIA", "ReflectionAI"]
-summary: "FT 10 月 10 日率先报道，Reuters/Bloomberg 跟进：英伟达正就在 Reflection AI 深化投资或整体收购进行早期谈判。英伟达此前已向 Reflection 投入 8 亿美元；Reflection 主攻开放权重模型，最新估值为 2026 年 3 轮融"
+summary: "FT 10 月 10 日率先报道，Reuters/Bloomberg 跟进：英伟达正就在 Reflection AI 深化投资或整体收购进行早期谈判。"
 weight: 999
 params:
   kind: entry

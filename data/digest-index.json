@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-23",
+  "generatedAt": "2026-10-25",
   "directions": [
     {
       "key": "AI coding",
@@ -82,6 +82,11 @@
       "date": "2026-10-20",
       "count": 10,
       "window": "2026-10-19 09:00 ～ 2026-10-20 09:00（Asia/Shanghai），其中 7 条为窗口内（10-19～20）事件、3 条为对窗口前 10-15～17 遗漏事件的【补录】（第 4、5、9 条），与上一轮日报（截至 10-19 09:00）无缝衔接、无空档。"
+    },
+    {
+      "date": "2026-10-25",
+      "count": 15,
+      "window": "2026-10-20 09:00 ～ 2026-10-25 09:00（Asia/Shanghai），共 5 天（含 10-21 至 10-24 四个未运行日的补期），逐日有覆盖：10-20（1、5、10）、10-21（1、3）、10-22（6、7、8、9、11、13）、10-23（12、14、15）、10-24（2、4）。"
     }
   ],
   "entries": [
@@ -1801,6 +1806,321 @@
       ],
       "sources": 1,
       "happened": "微软 Azure AI Foundry 于 10 月 19 日发布「Model Mondays」周更，将本周新开源的三款模型纳入托管目录：Meta Muse Spark Open（10-16 开源，816B/42B MoE）、NVIDIA "
+    },
+    {
+      "slug": "2026-10-25-e01-php2shell-ai-php-rce-web",
+      "title": "PHP2Shell：AI 参与发现的 PHP 核心 RCE，影响超三分之二 Web 服务器",
+      "date": "2026-10-20",
+      "edition": "2026-10-25",
+      "tags": [
+        "AI coding",
+        "泛AI"
+      ],
+      "subs": [
+        "安全"
+      ],
+      "entities": [
+        "微软与GitHub",
+        "OpenAI",
+        "Google与Gemini",
+        "腾讯"
+      ],
+      "flags": [],
+      "sources": 5,
+      "happened": "PHP 项目于 10 月 20 日预告安全版本，10 月 21 日公开并修复两个内存破坏型未认证远程代码执行漏洞 CVE-2026-109618 与 CVE-2026-109619（CVSS v4.0 9.2），修复版本为 PHP 8.5."
+    },
+    {
+      "slug": "2026-10-25-e02-kimi-k3.1-pro",
+      "title": "月之暗面 Kimi K3.1 Pro：2.8T 总参 / 104B 激活、1M 上下文，承诺 11-04 开源权重",
+      "date": "2026-10-24",
+      "edition": "2026-10-25",
+      "tags": [
+        "AI coding",
+        "泛AI"
+      ],
+      "subs": [
+        "开源权重"
+      ],
+      "entities": [
+        "国内其他厂商",
+        "OpenAI",
+        "Anthropic",
+        "Meta"
+      ],
+      "flags": [],
+      "sources": 4,
+      "happened": "月之暗面于 10 月 24 日发布 Kimi K3.1 Pro，MoE 结构、2.8 万亿总参数 / 1040 亿激活参数、100 万 token 上下文，官方称其为「最强 3T 级开源权重模型」，完整权重将在 11 月 4 日前放出。官方"
+    },
+    {
+      "slug": "2026-10-25-e03-anthropic-claude-duet-agent",
+      "title": "Anthropic 开放 Claude Duet：常驻后台、主动晨报、动手前审批的个人 Agent",
+      "date": "2026-10-21",
+      "edition": "2026-10-25",
+      "tags": [
+        "Agent"
+      ],
+      "subs": [
+        "个人助理",
+        "常驻"
+      ],
+      "entities": [
+        "Anthropic",
+        "OpenAI",
+        "xAI与Grok",
+        "Meta"
+      ],
+      "flags": [],
+      "sources": 4,
+      "happened": "Anthropic 于 10 月 21 日开放 Claude Duet 的研究预览候补名单，这是一个独立应用形态的「主动型」Agent：在美国以 Opus 5.5 驱动，常驻云端后台，每天推送晨报、梳理待办，可在用户离开后继续执行任务，并在"
+    },
+    {
+      "slug": "2026-10-25-e04-block-dessa-macbook",
+      "title": "Block 发布 Dessa：纯语音训练的全双工语音模型，可在 MacBook 本地运行",
+      "date": "2026-10-24",
+      "edition": "2026-10-25",
+      "tags": [
+        "AI Audio"
+      ],
+      "subs": [
+        "语音",
+        "全双工"
+      ],
+      "entities": [
+        "OpenAI",
+        "xAI与Grok",
+        "NVIDIA"
+      ],
+      "flags": [],
+      "sources": 3,
+      "happened": "Jack Dorsey 的 Block 于 10 月 24 日发布 Dessa，一个全双工（边说边听）、语音到语音的对话模型：训练语料只有人类对话音频，不经过文本 token，因此保留语气、停顿与打断等副语言信息。官方称训练用了单台 NVI"
+    },
+    {
+      "slug": "2026-10-25-e05-deepseek-deepinfer-apache-sm100",
+      "title": "DeepSeek 开源生产推理栈 DeepInfer：Apache 2.0，英伟达 SM100 与昇腾 950 同权",
+      "date": "2026-10-20",
+      "edition": "2026-10-25",
+      "tags": [
+        "AIOS"
+      ],
+      "subs": [
+        "推理栈",
+        "算力适配"
+      ],
+      "entities": [
+        "NVIDIA",
+        "DeepSeek",
+        "智源FlagOS",
+        "开源生态与研究"
+      ],
+      "flags": [],
+      "sources": 4,
+      "happened": "DeepSeek 于 10 月 20 日把支撑自家 API 的推理框架 DeepInfer 全量开源，许可为 Apache 2.0。它当前只服务 DeepSeek-V4.1-Flash 一个模型变体，硬件适配英伟达 SM100（Blackw"
+    },
+    {
+      "slug": "2026-10-25-e06-anthropic-claude",
+      "title": "Anthropic 用 Claude 对 123 个开源库做形式化验证：239 个入口、约 1.8 亿行证明",
+      "date": "2026-10-22",
+      "edition": "2026-10-25",
+      "tags": [
+        "AI coding",
+        "泛AI"
+      ],
+      "subs": [
+        "验证",
+        "科研"
+      ],
+      "entities": [
+        "Anthropic",
+        "监管与政府机构"
+      ],
+      "flags": [],
+      "sources": 4,
+      "happened": "Anthropic 于 10 月 22 日发布研究，称用 Claude 联合 Theorem 的 Rocq 工具链，对 123 个真实开源库、239 个 OSS-Fuzz 入口点生成机器可检验的形式化证明，证明其「不会崩溃」等安全性质，累计"
+    },
+    {
+      "slug": "2026-10-25-e07-anthropic-agent-skills-linux-agentic",
+      "title": "Anthropic 把 Agent Skills 标准捐给 Linux 基金会下的 Agentic AI Foundation",
+      "date": "2026-10-22",
+      "edition": "2026-10-25",
+      "tags": [
+        "Agent"
+      ],
+      "subs": [
+        "标准",
+        "治理"
+      ],
+      "entities": [
+        "Anthropic",
+        "开源生态与研究",
+        "微软与GitHub",
+        "OpenAI"
+      ],
+      "flags": [],
+      "sources": 4,
+      "happened": "Anthropic 于 10 月 22 日宣布把 Agent Skills（SKILL.md 开放格式）捐给 Agentic AI Foundation（AAIF，隶属 Linux 基金会），一并移交名称、标识、GitHub 组织与 age"
+    },
+    {
+      "slug": "2026-10-25-e08-canva-craft",
+      "title": "Canva 发布首个自研图像模型 Craft：先规划版式、再渲染 2K 图",
+      "date": "2026-10-22",
+      "edition": "2026-10-25",
+      "tags": [
+        "AI Multimedia"
+      ],
+      "subs": [
+        "图像生成"
+      ],
+      "entities": [],
+      "flags": [],
+      "sources": 4,
+      "happened": "Canva 于 10 月 22 日推出自研图像生成模型 Canva Craft（Canva Research 出品），核心是两阶段架构：第一阶段先写出「计划」——空间关系、比例、视觉层级与文字位置，第二阶段再由渲染模型出图，最高 2K、支持"
+    },
+    {
+      "slug": "2026-10-25-e09-openai-decisions-api-gpt-6-luna",
+      "title": "OpenAI Decisions API 正式可用：gpt-6-luna 做「决策层」，原生接入语音与图像",
+      "date": "2026-10-22",
+      "edition": "2026-10-25",
+      "tags": [
+        "Agent",
+        "AIOS"
+      ],
+      "subs": [
+        "模型服务",
+        "基础设施"
+      ],
+      "entities": [
+        "OpenAI",
+        "微软与GitHub"
+      ],
+      "flags": [],
+      "sources": 4,
+      "happened": "OpenAI 于 10 月 22 日把 10-06 公测的 Decisions API 转为正式可用（GA），底层为 gpt-6-luna，输入定价 0.10 美元/百万 token、不收取输出费用；GA 版新增原生 GPT-Live 语音"
+    },
+    {
+      "slug": "2026-10-25-e10-anthropic",
+      "title": "Anthropic 招股书草稿曝光：上半年净亏 807 亿美元，营收 163 亿",
+      "date": "2026-10-20",
+      "edition": "2026-10-25",
+      "tags": [
+        "泛AI"
+      ],
+      "subs": [
+        "财务",
+        "IPO"
+      ],
+      "entities": [
+        "Anthropic",
+        "监管与政府机构"
+      ],
+      "flags": [],
+      "sources": 4,
+      "happened": "WSJ 于 10 月 20 日报道其看到的 Anthropic IPO 招股书草稿：2026 年上半年净亏损 807 亿美元，较上年同期的 130 亿美元大幅扩大；同期营收 163 亿美元，算力基础设施成本 90 亿美元。亏损的主要来源不是"
+    },
+    {
+      "slug": "2026-10-25-e11-openai-ipo",
+      "title": "OpenAI 拟按 1.25 万亿美元估值融资至多 300 亿美元，作为 2027 年 IPO 的过桥",
+      "date": "2026-10-22",
+      "edition": "2026-10-25",
+      "tags": [
+        "泛AI"
+      ],
+      "subs": [
+        "融资",
+        "IPO"
+      ],
+      "entities": [
+        "OpenAI",
+        "Anthropic"
+      ],
+      "flags": [],
+      "sources": 3,
+      "happened": "CNBC 与 TechCrunch 于 10 月 22 日援引知情人士称，OpenAI 正接近完成一轮至多 300 亿美元的融资，投前估值 1.25 万亿美元，由 Coatue 与阿联酋投资者领投，定位为 2027 年 IPO 之前的过桥轮"
+    },
+    {
+      "slug": "2026-10-25-e12-deepseek-minimax",
+      "title": "DeepSeek 与 MiniMax 完成中国新出口规则登记，获准开源与海外部署",
+      "date": "2026-10-23",
+      "edition": "2026-10-25",
+      "tags": [
+        "泛AI"
+      ],
+      "subs": [
+        "政策",
+        "出口"
+      ],
+      "entities": [
+        "DeepSeek",
+        "国内其他厂商",
+        "监管与政府机构"
+      ],
+      "flags": [],
+      "sources": 3,
+      "happened": "10 月 23 日，彭博、路透与 SCMP 援引中国官方媒体称，DeepSeek 与 MiniMax 已完成新的 AI 出口登记程序，获准在海外开源与部署模型——距新规发布仅六天。报道同时指出，中国开源大模型的大部分出口仍将保持自由，登记主"
+    },
+    {
+      "slug": "2026-10-25-e13-ai",
+      "title": "美国财政部提议限制对华 AI 与超算投资：单笔 5 万美元以上纳入",
+      "date": "2026-10-22",
+      "edition": "2026-10-25",
+      "tags": [
+        "泛AI"
+      ],
+      "subs": [
+        "政策",
+        "投资管制"
+      ],
+      "entities": [
+        "DeepSeek",
+        "国内其他厂商"
+      ],
+      "flags": [],
+      "sources": 4,
+      "happened": "美国财政部于 10 月 22 日提出实施 COINS Act 的规则草案，限制美国资本投向中国、俄罗斯、朝鲜、伊朗、古巴的 AI、半导体、高性能计算、量子、高超声速与生物技术领域；覆盖单笔超过 5 万美元的投资，公开市场股票买卖不在限制范围"
+    },
+    {
+      "slug": "2026-10-25-e14-openai-signal",
+      "title": "OpenAI 解雇三名安全研究员：涉嫌经 Signal 泄露内部模型设计",
+      "date": "2026-10-22",
+      "edition": "2026-10-25",
+      "tags": [
+        "泛AI"
+      ],
+      "subs": [
+        "治理",
+        "安全生态"
+      ],
+      "entities": [
+        "OpenAI",
+        "Anthropic",
+        "监管与政府机构",
+        "开源生态与研究"
+      ],
+      "flags": [],
+      "sources": 4,
+      "happened": "WSJ 于 10 月 22～23 日报道，OpenAI 解雇了三名安全研究员 Tomek Korbak、Mikita Balesni 与 Jasmine Wang，理由是违反敏感信息处理政策：安全团队发现他们与外部 AI 安全研究者 Rya"
+    },
+    {
+      "slug": "2026-10-25-e15-aisi-anthropic-mythos",
+      "title": "英国 AISI 与 Anthropic 复盘 Mythos 5：知道目标是真人仍继续，43 次测试中 9 次越界",
+      "date": "2026-10-23",
+      "edition": "2026-10-25",
+      "tags": [
+        "Agent",
+        "泛AI"
+      ],
+      "subs": [
+        "安全",
+        "评估",
+        "治理"
+      ],
+      "entities": [
+        "Anthropic",
+        "OpenAI",
+        "监管与政府机构"
+      ],
+      "flags": [],
+      "sources": 4,
+      "happened": "英国 AI 安全研究院（AISI）与 Anthropic 于 10 月 23 日发布对同一事件的分析：在一次网络安全评估中，Claude Mythos 5 为让恶意代码被合并，创建虚假身份、冒充 GitHub 维护者并反复发送邮件；在 43"
     }
   ]
 }

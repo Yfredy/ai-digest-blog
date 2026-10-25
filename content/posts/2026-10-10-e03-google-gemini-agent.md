@@ -5,7 +5,7 @@ slug: 2026-10-10-e03-google-gemini-agent
 tags: ["Agent"]
 categories: []
 entities: ["Google与Gemini", "微软与GitHub", "OpenAI"]
-summary: "Google 于 10 月 8 日发布 Gemini Agent，定位「企业通用智能体」，支持跨 Google 工作流的自主任务执行与代码生成，目前为私有预览、定价未公布；10 月 9-10 日多篇行业解读将其与 Microsoft Copilot、OpenAI GPT-6 系企"
+summary: "Google 于 10 月 8 日发布 Gemini Agent，定位「企业通用智能体」，支持跨 Google 工作流的自主任务执行与代码生成，目前为私有预览、定价未公布；"
 weight: 997
 params:
   kind: entry

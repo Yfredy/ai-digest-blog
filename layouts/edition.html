@@ -1,21 +1,27 @@
 {{- define "main" }}
 {{- $edition := .File.BaseFileName -}}
-{{- $items := sort (where site.RegularPages "Params.edition" $edition) "Params.entryNo" "asc" -}}
-<header class="page-header">
+{{- $items := sort (where (where site.RegularPages "Params.edition" $edition) "Params.kind" "entry") "Params.entryNo" "asc" -}}
+<header class="r-page-head">
+  <p class="r-kicker"><span class="r-dot" aria-hidden="true"></span>Daily · 当日完整成稿</p>
   <h1>{{ .Title }}</h1>
-  <div class="post-meta">
+  {{- with .Params.window }}<p class="r-page-head__desc">{{ . }}</p>{{ end }}
+  <p class="r-page-head__meta">
     <span>{{ .Date.Format "2006-01-02" }}</span>
-    <span>{{ len $items }} 条</span>
-    {{- with .Params.window }}<span class="edition-window">{{ . }}</span>{{- end }}
-  </div>
+    <span><b>{{ len $items }}</b> 条</span>
+    {{- with .Params.directionNotes }}<span><b>{{ len . }}</b> 个方向</span>{{ end }}
+    <a href="{{ "library/" | relURL }}">在动态库中筛选 →</a>
+  </p>
 </header>
 
 {{- with .Params.directionNotes }}
 <section class="dir-notes">
-  <h2 class="section-title">各方向小结</h2>
+  <header class="r-head">
+    <h2 class="r-title"><span class="r-idx">01</span>各方向小结</h2>
+    <span class="r-more">本期 {{ len . }} 个方向</span>
+  </header>
   <dl class="dir-notes__list">
     {{- range . }}
-    <div class="dir-notes__row">
+    <div class="dir-notes__row" data-dir="{{ lower .dir }}">
       <dt>{{ .dir }}</dt>
       <dd>{{ .text }}</dd>
     </div>
@@ -25,16 +31,24 @@
 {{- end }}
 
 <section class="edition-entries">
-  <h2 class="section-title">本期条目</h2>
-  <ol class="entry-list entry-list--num">
+  <header class="r-head">
+    <h2 class="r-title"><span class="r-idx">02</span>本期条目</h2>
+    <span class="r-more">{{ len $items }} 条</span>
+  </header>
+  <ol class="r-rows">
     {{- range $items }}
-    <li class="entry-item">
-      <a class="entry-item__title" href="{{ .RelPermalink }}">{{ .Title }}</a>
-      <div class="entry-item__meta">
-        <span class="badge badge--date">{{ .Params.eventDate }}</span>
-        {{- range .GetTerms "tags" }}<a class="badge badge--dir" href="{{ .RelPermalink }}">{{ .Title }}</a>{{- end }}
-        {{- range .Params.flags }}<span class="badge badge--flag">{{ . }}</span>{{- end }}
-      </div>
+    <li class="r-row" data-accent="{{ with .Params.tags }}{{ lower (index . 0) }}{{ end }}">
+      <span class="r-row__date">{{ printf "%02d" .Params.entryNo }}</span>
+      <span class="r-row__main">
+        <a class="r-row__title" href="{{ .RelPermalink }}">{{ .Title }}</a>
+        <span class="r-row__meta">
+          <span class="badge badge--date">{{ .Params.eventDate }}</span>
+          {{- range .GetTerms "tags" }}<a class="badge badge--dir" href="{{ .RelPermalink }}">{{ .Title }}</a>{{ end -}}
+          {{- range .Params.flags }}<span class="badge badge--flag">{{ . }}</span>{{ end -}}
+          {{- with .Params.sources }}<span class="r-row__src">{{ len . }} 个来源</span>{{ end }}
+        </span>
+      </span>
+      <span class="r-row__arrow" aria-hidden="true">→</span>
     </li>
     {{- end }}
   </ol>
